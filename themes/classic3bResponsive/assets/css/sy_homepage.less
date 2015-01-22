@@ -1,0 +1,154 @@
+/*
+ * CORE CSS FOR SY HOMEPAGE:
+ * sy_navigation
+ */
+
+/* LESS.css variables */
+@import "variables.less";
+
+
+/************************ CLASSIC 3 HOMEPAGE STYLES ************************/
+
+
+.front {
+
+	background: @background-color;
+	
+	#main-inner {
+	
+		background: @page-color;
+		padding: 0;
+	}
+	
+	footer {
+		
+		background: @background-color;
+	}
+	
+	#content-inner {
+	
+		margin: 0;
+	}
+	
+	#content-bottom {
+		
+		margin: 0 @gutter-percent;
+		
+	}
+	
+	#content-header,
+	#content-area {
+	
+		display: none;
+		visibility: hidden;
+	}
+	
+	#block-views-home_header_image-classic_3 {
+	
+		margin: 0;
+		
+		.flexslider {
+		
+			background: transparent;
+		}
+		
+		.flex-control-nav, .flex-direction-nav {
+		
+			display: none;
+			visibility: hidden;
+		}
+	}
+	
+	#block-menu-accountmenu {
+	
+	  font-family: @toolbar-font;
+	  font-size: @toolbar-font-size;
+    line-height: 3.5em;
+	  margin: 0;
+	  padding: 0;
+	  background: #FFFFFF;
+	  
+	  ul.menu {
+	  
+	  	padding: 0;
+	  	text-align: right;
+	  	margin: 0 @gutter-percent 0 0;
+	  	
+		  li {
+			  display: inline;
+			  font-size: 2em;
+			  margin-left: 1em;
+			  text-transform: none;
+			  
+			  a {
+			  
+				  border: none;
+				  color: @toolbar-a-link;
+				  text-decoration: none;
+			  }
+		  }
+	  }
+  }
+}
+
+
+@media screen and (min-width: 800px) {	
+
+	.front {
+	
+		ul.slides {
+		
+			width:100%;
+			
+			img {
+			
+				height:100%;
+				overflow:hidden;
+			}
+		}
+		
+		#block-search-0 {
+		
+			display:none;
+		}
+		
+		#logo-title {
+		
+			z-index: 100;
+		}
+		
+		#logo {
+		
+			margin-top: 40px;
+		}
+		
+		#block-views-home_header_image-classic_3 {
+		
+			overflow: hidden;
+			
+			.flex-direction-nav {
+			
+				display: block;
+				margin: 0;
+				padding: 0;
+				visibility: visible;
+			}
+		}
+		
+		.view-footer {
+		
+			bottom: 0;
+			height: 100%;
+			position: absolute;
+			
+			#logo-bg {
+			
+				background: url(../images/logo-bg.png) no-repeat;
+				background-size: 100% 100%;
+				height: 100%;
+				width: 500px;
+				z-index: 10;
+			}
+		}
+	}
+}

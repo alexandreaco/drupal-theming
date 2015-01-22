@@ -1,0 +1,52 @@
+/* LESS.css variables */
+@import "variables.less";
+
+/*****************************
+*** CURRICULUM GRID styles ***
+*****************************/
+.view-course-grid {
+
+	.views-view-grid {
+		border: 0 none !important;
+		tbody, tr, td, th {
+			border: 0 none !important;
+			text-align: center;
+		}
+		.row-1, .row-3, .row-5, .row-7, .row-9, .row-11 {
+			background-color: @color-light-gray;
+		}
+		.row-2, .row-4, .row-6, .row-8, .row-10, .row-12 {
+			background-color: @color-light-gray + #111;
+		}
+		th {
+			padding: .5em;
+		}
+		td {
+			font-size: 0;
+			line-height: 0;
+			a {
+				color: @color-dark-blue;
+				display: block;
+				font-size: 16px;
+				line-height: 16px;
+				padding: .5em;
+				text-decoration: none;
+			}
+			a:hover {
+				color: @color-blue;
+			}
+		}
+	}
+	
+	.attachment-after {
+
+		article {
+			clear: both;
+			display: block;
+			.course-description {
+				display: none;
+			}
+		}
+	}
+
+}

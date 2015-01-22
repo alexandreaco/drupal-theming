@@ -1,0 +1,106 @@
+/*
+ * CORE CSS FOR SY SEARCH FEATURE:
+ * sy_search
+ */
+
+/* LESS.css variables */
+@import "variables.less";
+
+
+/***************************
+****** SEARCH styles *******
+***************************/
+
+  #block-search-0  {
+  	background: #fff;
+  	border: 1px solid #ccc;
+  	.border-radius(1em, 1em, 1em, 1em);
+  	clear: both;
+  	float: right; 
+  	padding: 0;
+  	text-align: center;
+  	width: 100%;
+  	line-height: 1em;
+  }
+  
+  
+  #block-search-0 .content div {
+  	position: absolute; 
+  	left: -999em;
+  }
+
+
+  #block-search-0 .content form div {
+  	left: auto;
+  	position: relative; 
+  }
+  
+
+  #block-search-0 .content form div label {
+  	position: absolute; 
+  	left: -999em;
+  }
+  
+
+  #block-search-0 input[type="text"] {
+		border: none;
+		width: 75%; 
+  }
+  
+  
+  #block-search-0 input[type="submit"] {
+		background: url(../images/search.png) right center no-repeat transparent;
+		height: 20px;
+		text-indent: -9999em;
+		width: 25px;
+		.box-shadow(0,0,0,0,0,0,0);
+		box-shadow: none;
+		curser:	pointer;
+		margin: 4px 0 0 0; 
+  }
+  
+  #block-search-0 {
+  	margin: 0 (@gutter-percent);
+  	.form-text:focus {
+			outline:none
+		}
+  }
+  
+
+  #edit-search-theme-form-1-wrapper label {
+    display: none;
+  }
+
+
+
+/*** MEDIA QUERIES ***/
+
+@media screen and (min-width: 801px) {
+
+
+  #block-search-0   {
+  	clear: both;
+  	padding: 0 0.25em;
+  	width: 10em;
+  }
+  
+  
+  #block-search-0 input[type="text"] {
+		width: 70%; 
+  }
+  
+}/*/mediaquery*/
+
+@media screen and (min-width: 1200px) {
+
+
+  #block-search-0  {
+  	clear: both;
+  	padding: 0 0.5em;
+  	width: 12em;
+  }
+
+  
+}/*/mediaquery*/
+
+/**** /end SEARCH Feature styles ****/

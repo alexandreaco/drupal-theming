@@ -1,0 +1,452 @@
+/*
+ * CORE CSS FOR SY NAVIGATION:
+ * sy_navigation
+ */
+
+/* LESS.css variables */
+@import "variables.less";
+
+
+/************************ PRIMARY NAVIGATION STYLES ************************/
+
+  #navbar {
+    background-color: @navbar-color;
+    font-size: @navbar-font-size;
+  }
+  
+  #navbar .block {
+	  margin-bottom: 0;
+  }
+
+  #navbar ul.nice-menu-down {
+  	font-size: 18em / @font-base-size;
+  	height: 100%;
+  	margin: 0;
+  	padding: 0;
+  	width: 100%;
+  }
+
+  #navbar ul.nice-menu-down li, 
+  #navbar ul.nice-menu-down li.menuparent {
+  	background: none; 
+  	height: 100%;
+  	border: none;
+  	margin: 0; 
+  	padding: 0;
+  }
+
+  #navbar ul.nice-menu-down li.last {
+  	background-image: none;
+  	margin: 0;  
+  	padding: 0;
+  }
+
+  #navbar ul.nice-menu-down a {
+  	padding: .65em 1.2em; 
+  }
+  
+  #navbar ul.nice-menu-down .menuparent a {
+		padding-right: auto;
+  }
+  
+  #navbar ul.nice-menu-down a:link, 
+  #navbar ul.nice-menu-down a:visited {
+  	color: @navbar-a-link; 
+  	background-color: transparent; 
+  	text-decoration: none;
+  }
+  
+  #navbar ul.nice-menu-down a:hover, 
+  #navbar ul.nice-menu-down a:active, 
+  #navbar ul.nice-menu-down li.over a {
+  	color: @navbar-a-hover;
+  	background-color: @navbar-hover; 
+  	text-decoration: none;
+  }
+  
+  
+  #navbar ul.nice-menu-down li ul {
+  	border-top: none; 
+  	background-color: @navbar-sub;
+  	.colorize_bg(@navbar-sub,.95);
+  	padding-bottom: .5em;
+  }
+  
+  #navbar ul.nice-menu-down li ul li {
+	  width: 18em;
+  }
+
+  #navbar ul.nice-menu li ul li ul {
+		left: 18em;
+		top: 0;
+  }
+
+  #navbar ul.nice-menu-down li ul li {
+  	background-color: transparent; 
+  	background-image: none; 
+  	margin-right: 0; 
+  	padding-right: 0;
+  	font-size: 0.8888889em; /* back to 16px */
+  }
+
+  #navbar ul.nice-menu-down li ul li a {
+  	padding: .5em 1em;
+  }
+
+  #navbar ul.nice-menu-down li ul li a:link, 
+  #navbar ul.nice-menu-down li ul li a:visited {
+  	color: @navbar-sub-a;
+  	background-color: transparent;
+  }
+
+  #navbar ul.nice-menu-down li ul li a:hover, 
+  #navbar ul.nice-menu-down li ul li a:active {
+  	color: @navbar-sub-a-hover; 
+  	background-color: @navbar-sub-hover;
+  }
+  
+  #navbar ul.nice-menu-down li ul li.active, 
+  #navbar ul.nice-menu-down li.active-trail ul li a {
+  	padding-bottom: 1em; 
+  	border-bottom: none;
+  }
+  
+  #navbar ul.nice-menu li:hover ul, 
+  #navbar ul.nice-menu li.over ul {
+		display: block; 
+		visibility: visible;
+  }
+
+
+
+/*************************** UTILITY NAV ***************************/
+
+  #toolbar {
+		font-size: @toolbar-font-size;
+    line-height: @toolbar-font-size * 3.42;
+
+	  .block-menu, .block-menu_block
+	  {
+	  	float: none; 
+	  	margin-right: @gutter-percent; 
+	  	margin-bottom: 0; 
+	  	border-bottom: none;
+	  	padding: .5em 0;
+	  	
+			ul.menu 
+			{
+		  	list-style: none;
+		  	list-style-type: none; 
+		  	text-align: right; 
+		  	padding: 0;
+		  	margin: 0;
+		  	
+				li 
+				{
+			  	display: inline-block; 
+			  	text-transform: @navbar-text-transform; 
+			  	font-size: (14em / @font-base-size); 
+			  	margin-right: 0; 
+			  	padding-right: 1em; 
+			  	padding-left: 1em;
+			  	border-right: none; 
+			  	text-align: right;
+			  	
+			  	&.last {
+			  		padding-right: 0;
+			  	}
+			  	a {
+				  	color: @toolbar-a-link;
+				  	text-decoration: none;
+			  	}
+			  	a:hover {
+				  	border-bottom: 2px solid @toolbar-a-hover;
+				  	color: @toolbar-a-hover;
+			  	}
+			  	
+			  	ul {
+			  		display: none;
+			  		visibility: hidden;
+			  	}
+				}
+				
+				li.last 
+				{
+				}
+			}
+	  }
+  }
+
+
+
+/****************************** SECONDARY MENU *******************************/
+
+	  
+	#sidebar-left {
+		.block-menu_block, .block-menu {
+			display: none;
+			visibility: hidden;
+		}
+	}
+	
+	#sidebar-left .block-menu_block h2 
+	{ 
+		font-size: 20em / @font-base-size;
+		font-weight: normal;
+		margin: 0; 
+		padding: .25em 0;
+	}
+	  
+	  
+	#sidebar-left .block-menu_block h2 a:link, 
+	#sidebar-left .block-menu_block h2 a:visited 
+	{ 
+		text-decoration: none;
+	}
+	
+	  
+	#sidebar-left .block-menu_block h2 a:hover, 
+	#sidebar-left .block-menu_block h2 a:active 
+	{ 
+		text-decoration: none;
+	}
+	
+	  
+	#sidebar-left .block-menu_block ul.menu 
+	{
+		margin: 0;
+		padding: 0; 
+		font-size: 14em / @font-base-size; /* 12px / 16px = 0.75em */
+		font-weight: normal;
+	}
+	  
+	  
+	#sidebar-left .block-menu_block ul.menu li 
+	{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		list-style-image: none;
+		list-style-type: none; 
+	}
+	
+	
+	#sidebar-left .block-menu_block ul.menu li a 
+	{
+		line-height: 1.2em;
+		text-decoration: none;
+		padding: .5em 0 .5em 1em; 
+		color: @left-nav-a;
+		display: block;
+	}
+	
+	
+	#sidebar-left .block-menu_block ul.menu li a:hover 
+	{
+		text-decoration: none; 
+		color: @left-nav-a-hover;
+	}
+	  
+	  
+	#sidebar-left .block-menu_block ul.menu li.expanded 
+	{
+		margin: 0;
+		padding: 0; 
+		border-bottom: none;
+	}
+	
+	  
+	#sidebar-left .block-menu_block ul.menu li.expanded ul 
+	{
+		margin: 0px;
+		padding: 0 0 1em 1em; 
+		border-bottom: none;
+		font-weight: normal;
+	}
+	  
+	  
+	#sidebar-left .block-menu_block ul.menu li.expanded ul li 
+	{
+		padding: 0; 
+		border-top: none;
+	}
+	  
+	  
+	#sidebar-left .block-menu_block ul.menu li.expanded ul li a 
+	{
+		padding: .5em 0 .5em 1em; 
+	}
+	
+	
+	#sidebar-left .block-menu_block ul.menu li a.active-trail 
+	{
+		//background: url(../images/left-nav-active.png) left 48% no-repeat;
+	}
+	
+	
+	#sidebar-left .block-menu_block ul.menu li a.active 
+	{
+		//background: url(../images/left-nav-active.png) left 48% no-repeat;
+		color: @left-nav-a-active;
+	}
+	
+	
+	#sidebar-left .block-menu_block ul.menu li.collapsed {
+		background: url(../images/left-nav-collapsed.png) right 48% no-repeat;
+	}
+
+	#mobile-menu *:after{
+		clear: both;
+	}
+
+#mobile-menu .menu-label {
+	margin: 0 @gutter-percent;
+	position: relative;
+	top: 10px;
+}
+
+#mobile-menu, #nav{        
+width: 100%;
+position: relative;
+background: @mobile-menu-color;
+z-index: 999999;
+color: @mobile-menu-icon;
+overflow: hidden;
+}
+
+#mobile-menu a{
+color: @mobile-menu-a-link;
+cursor: pointer;
+}
+
+#mobile-menu a.menu-reveal.expanded{
+right: 0px;
+left: auto;
+text-align: center;
+text-indent: 0px;
+font-size: 18px;
+}
+
+#mobile-menu a.menu-reveal{
+width: 22px;
+height: 22px;
+position: absolute;
+top: 10px;
+right: @gutter-percent;
+cursor: pointer;
+color: @mobile-menu-icon;
+text-decoration: none;
+font-size: 16px;
+text-indent: -9999em;
+line-height: 22px;
+font-size: 1px;
+display: block;
+font-family: @font-stack-sans;
+}
+
+#mobile-menu a.menu-reveal  span {
+display: block;
+background: @mobile-menu-icon;
+height: 3px;
+margin-top: 3px;
+}
+
+#mobile-menu nav{
+float: left;
+width: 100%;
+margin-top: 15px;         
+}
+
+#mobile-menu nav ul{
+padding: 0;
+margin: 0;
+width: 100%;
+list-style-type: none;
+}
+
+#mobile-menu nav ul li{
+position: relative;
+float: left;
+width: 100%;
+}
+
+#mobile-menu nav ul li > a,
+#mobile-menu nav ul li > span{
+display: block;
+float: left;
+width: 90%;
+padding: 1em 5%;
+margin: 0;
+text-align: left;
+color: @mobile-menu-a-link;
+border-bottom: 1px solid @mobile-menu-border;
+text-decoration: none;
+text-transform: uppercase;
+}
+
+#mobile-menu nav ul li.last-menu-item *{
+margin-bottom: 0px;
+}
+
+#mobile-menu nav ul li a.expander{
+width: 26px;
+height: 26px;
+border: none !important;
+padding: 12px !important;
+text-align: center;
+position: absolute;
+right: 0;
+top: 0;
+z-index: 2;
+font-weight: 700;
+color: #fff;
+font-size: 25px;
+}
+
+#mobile-menu nav ul li li a{
+width: 80%;
+padding: 1em 10%;
+border-bottom: 1px solid #f1f1f1;
+border-bottom: 1px solid rgba(255,255,255,0.25);
+opacity: 0.75;
+filter: alpha(opacity=75);
+text-shadow: none !important;
+visibility: visible;
+}
+
+#mobile-menu nav ul li li li a {
+width: 70%;
+padding: 1em 15%;
+}
+#mobile-menu nav ul li li li li a {
+width: 60%;
+padding: 1em 20%;
+}
+#mobile-menu nav ul li li li li li a {
+width: 50%;
+padding: 1em 25%;
+}
+
+.clearfix:after{
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+
+/*** MEDIA QUERIES ***/
+
+	@media screen and (min-width: 801px) {
+
+		#sidebar-left {
+			.block-menu_block, .block-menu {
+				display: block;
+				visibility: visible;
+			}
+		}
+
+	}/*/mediaquery*/	
+	
+/**** /end Navigation styles ****/
+

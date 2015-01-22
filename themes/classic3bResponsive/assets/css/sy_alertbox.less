@@ -1,0 +1,78 @@
+/*
+ * CORE CSS FOR SY ALERTBOX FEATURE:
+ * sy_alertbox
+ */
+
+/* LESS.css variables */
+@import "variables.less";
+
+
+/**********************************
+********* ALERTBOX styles *********
+**********************************/
+
+#alert {
+  background: @alert-color;
+  color: @alert-text;
+}
+
+#alert-inner {
+	padding: .5em @gutter-percent 0 @gutter-percent;
+}
+
+#block-views-Alertbox-block_1 {
+  margin: 0;
+  h1 {
+	  color: @alert-text;
+	  font-size: 1.55em;
+  }
+}
+
+.alertbox { 
+	font-family: @font-stack-sans-bold;
+	margin: 0;
+	width: 100%;
+	#clickable {
+		color: @alert-text; 
+  	cursor: pointer;
+  	display: block;
+  	padding: 1em 0;
+	}
+	#clickable:hover {
+		color: @alert-text; 
+		text-decoration: underline;
+	}
+}
+  
+#easyNotification {
+	padding: 1em;
+	background-color: @alert-color;
+  color: @alert-text; 
+	position:relative; 
+	h1 {
+		font-size: 1.25em;
+		color: @alert-text;
+	}
+	
+	a {
+		text-decoration: none; 
+		color: @alert-text;
+	}
+	
+	a:hover {
+		text-decoration: underline; 
+		color: @alert-text;
+	}
+	
+	.close {
+		text-align: right; 
+		display: block;
+		cursor:pointer;
+	}
+	
+	.close:hover {
+		text-decoration: underline;
+	}
+}
+
+/**** /end ALERTBOX Feature styles ****/
