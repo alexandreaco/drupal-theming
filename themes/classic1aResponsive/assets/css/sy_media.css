@@ -1,0 +1,440 @@
+/*
+ * CORE CSS FOR MEDIA:
+ * sy_media
+ */
+/* LESS.css variables */
+/* CLASSIC 1b */
+/* LESS.css variables */
+/* (get imported in each separate .less file) 
+CLASSIC 1A*/
+/******************************** LAYOUT ********************************/
+/******************************** COLORS ********************************//* Branding Colors */
+/****************************** TYPOGRAPHY ******************************/
+strong,
+b {
+  font-family: 'Avenir LT W01 45 Book', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-weight: 700;
+}
+em,
+i {
+  font-family: 'Avenir LT W01 45 Book', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-style: italic;
+}
+strong em,
+em strong,
+b i,
+i b {
+  font-family: 'AvenirLTW01-85HeavyObli', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+body#tinymce em,
+body.forceColors #iframe em,
+body #tinymce em,
+body.mceContentBody em,
+body#tinymce i,
+body.forceColors #iframe i,
+body #tinymce i,
+body.mceContentBody i {
+  font-style: italic;
+}
+body#tinymce b,
+body.forceColors #iframe b,
+body #tinymce b,
+body.mceContentBody b,
+body#tinymce strong,
+body.forceColors #iframe strong,
+body #tinymce strong,
+body.mceContentBody strong {
+  font-weight: bold;
+}
+/*************************** HTML BASE STYLES ****************************/
+/* H1*/
+/* H2*/
+/* H3*/
+/* H4*/
+/* H5*/
+/* H6*/
+/* Blockquote */
+/* Links */
+/*************************** FORM BASE STYLES ****************************/
+/******************************** BUTTONS ********************************/
+/******************************** HEADER ********************************/
+/******************************** TOOLBAR ********************************/
+/******************************** NAVBAR ********************************/
+/***************************** MOBILE MENU ******************************/
+/****************************** SEARCH **********************************/
+/**************************** SIDEBAR-LEFT ******************************/
+/**************************** SIDEBAR-RIGHT *****************************/
+/****************************** FLEX SLIDER *******************************/
+/******************************** FOOTER ********************************/
+/******************************* HOMEPAGE *******************************/
+/* Events Feed */
+/* Callouts */
+/* News Feed */
+/* Desktop View */
+/********************************* AUX **********************************/
+/* ALERT variables */
+/* BLOG Feature variables */
+/* CURRICULUM variables */
+/* CALENDAR variables */
+/* FAQ variables */
+/* DIRECTORY Feature variables */
+/* GROUPS Feature variables */
+/* IMAGE variables */
+/* NEWS Feature variables */
+/* NEWSLETTER variables */
+/* NEWSLETTER mail variables */
+/****************************** FUNCTIONS *******************************/
+.no_select_highlight {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+/* DEPRECIATED */
+/* @navbar-text: #fff; */
+/* @navbar-active: @color-light-green; */
+/* @navbar-height: auto; */
+/* @submit-button-top: @color-blue; */
+/* @submit-button-bottom: @color-dark-blue; */
+/* @submit-button-hover-top: @color-dark-blue; */
+/* @submit-button-hover-bottom: @color-blue; */
+/* @callout-color: @color-red; */
+/* @callout-link: @color-red; */
+/* @callout-gradient: @color-red; */
+/* @submit-button: @color-light-green; */
+/* @submit-button-hover: @color-green; */
+/* @directory-button-show-all: @color-green; */
+/* @directory-button-show-all-hover: @color-light-green; */
+/* @directory-button-show-all-text: #fff; */
+/* @directory-button-show-all-text-hover: #fff; */
+/*************************************
+****** RESPONSIVE IMAGE styles *******
+*************************************/
+.image-caption-container {
+  max-width: 100%;
+  width: 100%;
+}
+.image-caption-container img {
+  max-width: 100%;
+  width: 100%;
+}
+.image-caption-container[style*="left"] {
+  clear: left;
+  float: left;
+  margin-right: 3.125%;
+}
+.image-caption-container[style*="right"] {
+  clear: right;
+  float: right;
+  margin-left: 3.125%;
+}
+.image-caption-container[style*="auto"] {
+  clear: both;
+  display: block;
+  float: none;
+  margin: 0 auto;
+}
+/* image cache preset specific styes */
+.image-caption-container.imagecache-medium,
+img.imagecache-medium {
+  max-width: 46.875%;
+  width: 46.875%;
+}
+.image-caption-container.imagecache-thumbnail,
+img.imagecache-thumbnail {
+  max-width: 29.875%;
+  width: 29.875%;
+}
+.image-caption-container.imagecache-medium img.imagecache-medium,
+.image-caption-container.imagecache-thumbnail img.imagecache-thumbnail {
+  max-width: 100%;
+  width: 100%;
+}
+#sidebar-right .image-caption-container.imagecache-medium,
+#sidebar-right img.imagecache-medium,
+#sidebar-right .image-caption-container.imagecache-thumbnail,
+#sidebar-right img.imagecache-thumbnail {
+  max-width: 100%;
+  width: 100%;
+}
+/**** /end RESPONSIVE IMAGE styles ****/
+/**************************************
+******* LIGHTBOX IMG Styles ************
+**************************************/
+a.lightbox-processed:link,
+a.lightbox-processed:visited {
+  position: relative;
+  text-decoration: none;
+}
+a.lightbox-processed .image-caption-container {
+  position: relative;
+}
+a.lightbox-processed .image-caption-container:after {
+  content: '+';
+  -webkit-border-top-left-radius: 10em;
+  -moz-border-radius-topleft: 10em;
+  -o-border-top-left-radius: 10em;
+  border-top-left-radius: 10em;
+  -webkit-border-top-right-radius: 10em;
+  -moz-border-radius-topright: 10em;
+  -o-border-top-right-radius: 10em;
+  border-top-right-radius: 10em;
+  -webkit-border-bottom-right-radius: 10em;
+  -moz-border-radius-bottomright: 10em;
+  -o-border-bottom-right-radius: 10em;
+  border-bottom-right-radius: 10em;
+  -webkit-border-bottom-left-radius: 10em;
+  -moz-border-radius-bottomleft: 10em;
+  -o-border-bottom-left-radius: 10em;
+  border-bottom-left-radius: 10em;
+  border-radius: 10em 10em 10em 10em;
+  background: rgba(0, 112, 90, 0.65);
+  color: #fff;
+  font-family: Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1em;
+  padding: 0.1em .25em .25em .25em;
+  position: absolute;
+  top: .75em;
+  right: .75em;
+  text-decoration: none;
+  z-index: 5;
+}
+/**** /end LIGHTBOX Feature styles ****/
+/*********************************
+***** Embedded Video styles ******
+*********************************/
+body.emvideo-modal-iframe {
+  padding: 0px;
+}
+.emvideo-thumbnail-replacement {
+  margin: 0px;
+  padding: 0px;
+}
+.emvideo-thumbnail-replacement span {
+  background: url(../images/emvideo-play.png) no-repeat;
+  display: block;
+  height: 79px;
+  left: 25%;
+  position: absolute;
+  top: 10%;
+  width: 79px;
+}
+.emvideo-thumbnail-replacement span:hover {
+  background-position: -80px 0px;
+}
+.videoWrapper {
+  padding: .3em .3em 0 .3em;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  width: 96%;
+  height: 95%;
+}
+/**** /end VIDEO Feature styles ****/
+/*********************************
+****** Node Gallery styles *******
+*********************************/
+ul.gallery_grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul.gallery_grid li {
+  list-style: none;
+  margin: 1em 3% 0 0;
+  padding: 0;
+  float: left;
+  width: 22%;
+}
+ul.gallery_grid li b.title {
+  font-weight: normal;
+  font-size: 0.75em;
+}
+ul.gallery_grid li i.image {
+  font-family: 'Avenir LT W01 45 Book', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-style: normal;
+}
+ul.gallery_grid li i.image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+ul.gallery_grid li.first {
+  clear: left;
+}
+/**** /end NODE GALLERY Feature styles ****/
+/*
+ * jQuery FlexSlider v1.8
+ * http://flex.madebymufffin.com
+ *
+ * Copyright 2011, Tyler Smith
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active {
+  outline: none;
+}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* FlexSlider Necessary Styles
+*********************************/.flexslider {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.flexslider .slides > li {
+  display: none;
+}
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {
+  max-width: 100%;
+  display: block;
+}
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+/* Clearfix for the .slides element */
+.slides:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+html[xmlns] .slides {
+  display: block;
+}
+* html .slides {
+  height: 1%;
+}
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {
+  display: block;
+}
+/* FlexSlider Default Theme
+*********************************/
+.flexslider {
+  position: relative;
+  zoom: 1;
+  overflow: hidden;
+}
+.flexslider .slides {
+  zoom: 1;
+}
+.flexslider .slides > li {
+  position: relative;
+}
+/* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
+.flex-container {
+  zoom: 1;
+  position: relative;
+}
+/* Caption style */
+/* IE rgba() hack */
+.flex-caption {
+  background: none;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000)';
+  filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000)';
+  zoom: 1;
+}
+.flex-caption {
+  width: 96%;
+  padding: 2%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  line-height: 18px;
+}
+/* Direction Nav */
+.flex-direction-nav li a {
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  display: block;
+  background: url(../images/flexslider/bg_direction_nav.png) no-repeat 0 0;
+  position: absolute;
+  bottom: 40%;
+  cursor: pointer;
+  text-indent: -9999px;
+}
+.flex-direction-nav li .next {
+  background-position: -40px 0;
+  right: -40px;
+}
+.flex-direction-nav li .prev {
+  background-position: 40px 0;
+  left: -40px;
+}
+.flex-direction-nav li .disabled {
+  opacity: .3;
+  filter: alpha(opacity=30);
+  cursor: default;
+}
+/* Control Nav */
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: 1.5em;
+  right: .75em;
+  text-align: right;
+}
+.flex-control-nav li {
+  margin: 0 .5em 0 0;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.flex-control-nav li a {
+  width: 13px;
+  height: 13px;
+  display: block;
+  background: url(../images/flexslider/bg_control_nav.png) no-repeat 0 0;
+  cursor: pointer;
+  text-indent: 9999px;
+}
+.flex-control-nav li a:hover {
+  background-position: 0 -13px;
+}
+.flex-control-nav li a.active {
+  background-position: 0 -26px;
+  cursor: default;
+}
+/* General Styles */
+ul.slides {
+  padding: 0;
+  margin: 0;
+}
+ul.slides li {
+  padding: 0;
+  margin: 0;
+}
+ul.slides img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}

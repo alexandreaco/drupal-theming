@@ -1,0 +1,147 @@
+/* LESS.css variables */
+/* CLASSIC 1b */
+/* LESS.css variables */
+/* (get imported in each separate .less file) 
+CLASSIC 1A*/
+/******************************** LAYOUT ********************************/
+/******************************** COLORS ********************************//* Branding Colors */
+/****************************** TYPOGRAPHY ******************************/
+strong,
+b {
+  font-family: 'Avenir LT W01 45 Book', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-weight: 700;
+}
+em,
+i {
+  font-family: 'Avenir LT W01 45 Book', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-style: italic;
+}
+strong em,
+em strong,
+b i,
+i b {
+  font-family: 'AvenirLTW01-85HeavyObli', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+body#tinymce em,
+body.forceColors #iframe em,
+body #tinymce em,
+body.mceContentBody em,
+body#tinymce i,
+body.forceColors #iframe i,
+body #tinymce i,
+body.mceContentBody i {
+  font-style: italic;
+}
+body#tinymce b,
+body.forceColors #iframe b,
+body #tinymce b,
+body.mceContentBody b,
+body#tinymce strong,
+body.forceColors #iframe strong,
+body #tinymce strong,
+body.mceContentBody strong {
+  font-weight: bold;
+}
+/*************************** HTML BASE STYLES ****************************/
+/* H1*/
+/* H2*/
+/* H3*/
+/* H4*/
+/* H5*/
+/* H6*/
+/* Blockquote */
+/* Links */
+/*************************** FORM BASE STYLES ****************************/
+/******************************** BUTTONS ********************************/
+/******************************** HEADER ********************************/
+/******************************** TOOLBAR ********************************/
+/******************************** NAVBAR ********************************/
+/***************************** MOBILE MENU ******************************/
+/****************************** SEARCH **********************************/
+/**************************** SIDEBAR-LEFT ******************************/
+/**************************** SIDEBAR-RIGHT *****************************/
+/****************************** FLEX SLIDER *******************************/
+/******************************** FOOTER ********************************/
+/******************************* HOMEPAGE *******************************/
+/* Events Feed */
+/* Callouts */
+/* News Feed */
+/* Desktop View */
+/********************************* AUX **********************************/
+/* ALERT variables */
+/* BLOG Feature variables */
+/* CURRICULUM variables */
+/* CALENDAR variables */
+/* FAQ variables */
+/* DIRECTORY Feature variables */
+/* GROUPS Feature variables */
+/* IMAGE variables */
+/* NEWS Feature variables */
+/* NEWSLETTER variables */
+/* NEWSLETTER mail variables */
+/****************************** FUNCTIONS *******************************/
+.no_select_highlight {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+/* DEPRECIATED */
+/* @navbar-text: #fff; */
+/* @navbar-active: @color-light-green; */
+/* @navbar-height: auto; */
+/* @submit-button-top: @color-blue; */
+/* @submit-button-bottom: @color-dark-blue; */
+/* @submit-button-hover-top: @color-dark-blue; */
+/* @submit-button-hover-bottom: @color-blue; */
+/* @callout-color: @color-red; */
+/* @callout-link: @color-red; */
+/* @callout-gradient: @color-red; */
+/* @submit-button: @color-light-green; */
+/* @submit-button-hover: @color-green; */
+/* @directory-button-show-all: @color-green; */
+/* @directory-button-show-all-hover: @color-light-green; */
+/* @directory-button-show-all-text: #fff; */
+/* @directory-button-show-all-text-hover: #fff; */
+/*
+ * IE CSS
+ *
+ * CSS targeted specifically for Internet Explorer for Windows.
+ *
+ * While building your theme, you should be aware that IE limits Drupal to 31
+ * stylesheets total. The work-around for the bug is to enable CSS aggregation
+ * under: admin / settings / performance.
+ *
+ * Properties starting with an underscore _ are for IE 5 and 6 only.
+ * Properties starting with head:first-child+body are for IE7 only.
+ * Properties with a child selector (>) or sibling selector (+) are for IE7 only.
+ *
+ *
+ */
+#navbar ul.nice-menu-down li ul {
+  background-color: #68ad45;
+}
+header,
+footer {
+  display: block;
+}
+#logo-title {
+  display: block;
+}
+#logo {
+  display: block;
+  float: none;
+}
+#logo-image {
+  float: none;
+  display: block;
+}
+img {
+  height: auto !important;
+  width: auto\9;
+  /* IE 8 */
+
+}

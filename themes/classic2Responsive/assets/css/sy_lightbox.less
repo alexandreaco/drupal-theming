@@ -1,0 +1,43 @@
+/*
+ * CORE CSS FOR SY LIGHTBOX FEATURE:
+ * 
+ */
+
+/* LESS.css variables */
+@import "variables.less";
+
+
+/**************************************
+******* LIGHTBOX IMG Styles ************
+**************************************/
+ 
+	a.lightbox-processed:link, a.lightbox-processed:visited {
+		position: relative;
+		text-decoration: none; 
+	}
+    a.lightbox-processed { 
+		.image-caption-container {
+			position: relative;
+		}
+	    .image-caption-container:after {
+	        content: '+'; 
+	        .border-radius(10em, 10em, 10em, 10em);
+	        .colorize_bg(@navbar-color, .65);
+	        color: #fff; 
+	        font-family: @font-stack-sans-fallback; 
+	        font-size: 1em; 
+	        font-weight: bold; 
+       		font-style: normal;
+       		line-height: 1em;
+	        padding: 0.1em .25em .25em .25em; 
+	        position: absolute;
+	        top: .75em; 
+	        right: .75em; 	        
+	        text-decoration: none; 
+	        z-index: 5; 
+	    }
+	}
+
+
+
+/**** /end LIGHTBOX Feature styles ****/

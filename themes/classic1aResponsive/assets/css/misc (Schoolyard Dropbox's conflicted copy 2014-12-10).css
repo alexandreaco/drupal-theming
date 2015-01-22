@@ -1,0 +1,6 @@
+#webform-component-what-will-be-the-amount-of-your-payment .form-item input.form-text {
+  float: none;
+}
+body.node-type-webform {
+  position: relative;
+}

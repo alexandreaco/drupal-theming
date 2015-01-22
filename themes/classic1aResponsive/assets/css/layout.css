@@ -1,0 +1,227 @@
+/*
+ * LAYOUT STYLES
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout is based on the Zen Columns layout method.
+ *   http://drupal.org/node/201428
+ *
+ * Only CSS that affects the layout (positioning) of major elements should be
+ * listed here.  Such as:
+ *   display, position, float, clear, width, height, min-width, min-height
+ *   margin, border, padding, overflow
+ */
+/* LESS.css variables */
+/* CLASSIC 1b */
+/* LESS.css variables */
+/* (get imported in each separate .less file) 
+CLASSIC 1A*/
+/******************************** LAYOUT ********************************/
+/******************************** COLORS ********************************//* Branding Colors */
+/****************************** TYPOGRAPHY ******************************/
+strong,
+b {
+  font-family: 'Avenir LT W01 45 Book', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-weight: 700;
+}
+em,
+i {
+  font-family: 'Avenir LT W01 45 Book', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-style: italic;
+}
+strong em,
+em strong,
+b i,
+i b {
+  font-family: 'AvenirLTW01-85HeavyObli', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+body#tinymce em,
+body.forceColors #iframe em,
+body #tinymce em,
+body.mceContentBody em,
+body#tinymce i,
+body.forceColors #iframe i,
+body #tinymce i,
+body.mceContentBody i {
+  font-style: italic;
+}
+body#tinymce b,
+body.forceColors #iframe b,
+body #tinymce b,
+body.mceContentBody b,
+body#tinymce strong,
+body.forceColors #iframe strong,
+body #tinymce strong,
+body.mceContentBody strong {
+  font-weight: bold;
+}
+/*************************** HTML BASE STYLES ****************************/
+/* H1*/
+/* H2*/
+/* H3*/
+/* H4*/
+/* H5*/
+/* H6*/
+/* Blockquote */
+/* Links */
+/*************************** FORM BASE STYLES ****************************/
+/******************************** BUTTONS ********************************/
+/******************************** HEADER ********************************/
+/******************************** TOOLBAR ********************************/
+/******************************** NAVBAR ********************************/
+/***************************** MOBILE MENU ******************************/
+/****************************** SEARCH **********************************/
+/**************************** SIDEBAR-LEFT ******************************/
+/**************************** SIDEBAR-RIGHT *****************************/
+/****************************** FLEX SLIDER *******************************/
+/******************************** FOOTER ********************************/
+/******************************* HOMEPAGE *******************************/
+/* Events Feed */
+/* Callouts */
+/* News Feed */
+/* Desktop View */
+/********************************* AUX **********************************/
+/* ALERT variables */
+/* BLOG Feature variables */
+/* CURRICULUM variables */
+/* CALENDAR variables */
+/* FAQ variables */
+/* DIRECTORY Feature variables */
+/* GROUPS Feature variables */
+/* IMAGE variables */
+/* NEWS Feature variables */
+/* NEWSLETTER variables */
+/* NEWSLETTER mail variables */
+/****************************** FUNCTIONS *******************************/
+.no_select_highlight {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+/* DEPRECIATED */
+/* @navbar-text: #fff; */
+/* @navbar-active: @color-light-green; */
+/* @navbar-height: auto; */
+/* @submit-button-top: @color-blue; */
+/* @submit-button-bottom: @color-dark-blue; */
+/* @submit-button-hover-top: @color-dark-blue; */
+/* @submit-button-hover-bottom: @color-blue; */
+/* @callout-color: @color-red; */
+/* @callout-link: @color-red; */
+/* @callout-gradient: @color-red; */
+/* @submit-button: @color-light-green; */
+/* @submit-button-hover: @color-green; */
+/* @directory-button-show-all: @color-green; */
+/* @directory-button-show-all-hover: @color-light-green; */
+/* @directory-button-show-all-text: #fff; */
+/* @directory-button-show-all-text-hover: #fff; */
+/** HTML5 Elements **/
+header,
+footer,
+navigation,
+section,
+article {
+  display: block;
+}
+/********************************* BODY *********************************/
+body {
+  margin: 0;
+  padding: 0;
+}
+body.admin-menu {
+  margin-top: 20px !important;
+}
+#page,
+#closure-blocks {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: none;
+  width: 100%;
+}
+.section-admin #page,
+.section-admin #closure {
+  max-width: none;
+}
+/********************************* MAIN *********************************/
+#main {
+  position: relative;
+  width: 100%;
+}
+#main-inner {
+  padding: 0 3.125%;
+}
+#sidebar-left,
+#sidebar-right,
+#content {
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+/******************************* CONTENT ********************************/
+#content {
+  float: left;
+  width: 100%;
+}
+#content-inner {
+  margin: 0 0 3em 0;
+}
+/** Prevent overflowing content **/
+header,
+#content,
+#navbar,
+#sidebar-left,
+#sidebar-right,
+footer,
+#closure-blocks {
+  overflow: visible;
+  word-wrap: break-word;
+}
+/******************************* RESPONSIVE *******************************/
+@media screen and (min-width: 800px) {
+  #page,
+  #closure-blocks {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    width: 100%;
+  }
+  .sidebar-left #content,
+  .two-sidebars #content {
+    width: 77.08333333333334%;
+  }
+  .sidebar-left #content #content-inner,
+  .two-sidebars #content #content-inner {
+    padding-left: 3.125%;
+  }
+  #sidebar-left {
+    float: left;
+    width: 22.916666666666664%;
+  }
+}
+/*/mediaquery*/
+@media screen and (min-width: 900px) {
+  .sidebar-right #content {
+    width: 77.08333333333334%;
+  }
+  .sidebar-right #content #content-inner {
+    padding-right: 3.125%;
+  }
+  .two-sidebars #content {
+    width: 54.16666666666667%;
+  }
+  .two-sidebars #content #content-inner {
+    padding: 0 3.125%;
+  }
+  #sidebar-right {
+    float: left;
+    width: 22.916666666666664%;
+  }
+}
+/*/mediaquery*/

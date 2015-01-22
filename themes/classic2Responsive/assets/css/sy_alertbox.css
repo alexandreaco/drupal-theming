@@ -1,0 +1,153 @@
+/*
+ * CORE CSS FOR SY ALERTBOX FEATURE:
+ * sy_alertbox
+ */
+/* LESS.css variables */
+/* CLASSIC 1b */
+/* LESS.css variables */
+/* (get imported in each separate .less file) 
+
+CLASSIC 2*/
+/******************************** LAYOUT ********************************/
+/******************************** COLORS ********************************/
+/* Branding Colors */
+/****************************** TYPOGRAPHY ******************************/
+strong,
+b {
+  font-family: 'Avenir LT W01 45 Book', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-weight: 700;
+}
+em,
+i {
+  font-family: 'Avenir LT W01 45 Book', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-style: italic;
+}
+strong em,
+em strong,
+b i,
+i b {
+  font-family: 'AvenirLTW01-85HeavyObli', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+body#tinymce em,
+body.forceColors #iframe em,
+body #tinymce em,
+body.mceContentBody em,
+body#tinymce i,
+body.forceColors #iframe i,
+body #tinymce i,
+body.mceContentBody i {
+  font-style: italic;
+}
+body#tinymce b,
+body.forceColors #iframe b,
+body #tinymce b,
+body.mceContentBody b,
+body#tinymce strong,
+body.forceColors #iframe strong,
+body #tinymce strong,
+body.mceContentBody strong {
+  font-weight: bold;
+}
+/*************************** HTML BASE STYLES ****************************/
+/* H1*/
+/* H2*/
+/* H3*/
+/* H4*/
+/* H5*/
+/* H6*/
+/* Blockquote */
+/* Links */
+/*************************** FORM BASE STYLES ****************************/
+/******************************** BUTTONS ********************************/
+/******************************** HEADER ********************************/
+/******************************** TOOLBAR ********************************/
+/******************************** NAVBAR ********************************/
+/***************************** MOBILE MENU ******************************/
+/****************************** SEARCH **********************************/
+/**************************** SIDEBAR-LEFT ******************************/
+/**************************** SIDEBAR-RIGHT *****************************/
+/****************************** FLEX SLIDER *******************************/
+/******************************** FOOTER ********************************/
+/******************************* HOMEPAGE *******************************/
+/* Events Feed */
+/* Callouts */
+/* News Feed */
+/* Desktop View */
+/********************************* AUX **********************************/
+/* ALERT variables */
+/* CALLOUT button */
+/* BLOG Feature variables */
+/* BUTTON colors */
+/* CALENDAR variables */
+/* FAQ variables */
+/* DIRECTORY Feature variables */
+/* GROUPS Feature variables */
+/* HOMEPAGE variables */
+/* NEWS Feature variables */
+/* NEWSLETTER variables */
+/* NEWSLETTER mail variables */
+/****************************** FUNCTIONS *******************************/
+.no_select_highlight {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+/**********************************
+********* ALERTBOX styles *********
+**********************************/
+#block-views-Alertbox-block_1 {
+  margin: 0;
+}
+.alertbox {
+  font-family: 'Avenir LT W01 85 Heavy', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  margin: 0;
+  width: 100%;
+  max-height: 59px;
+}
+.alertbox article #clickable {
+  padding: 1em;
+  display: block;
+  color: #fff;
+  background-color: #ff0000;
+  cursor: pointer;
+}
+.alertbox article #clickable:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.alertbox .view-footer .triangle {
+  position: relative;
+  display: none;
+  left: 2.9296875%;
+}
+#easyNotification {
+  padding: 1em;
+  background-color: #ff0000;
+  color: #fff;
+  position: relative;
+}
+#easyNotification h1 {
+  font-size: 1.5em;
+  color: #fff;
+}
+#easyNotification a {
+  text-decoration: none;
+  color: #fff;
+}
+#easyNotification a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+#easyNotification .close {
+  text-align: right;
+  display: block;
+  cursor: pointer;
+}
+#easyNotification .close:hover {
+  text-decoration: underline;
+}
+/**** /end ALERTBOX Feature styles ****/

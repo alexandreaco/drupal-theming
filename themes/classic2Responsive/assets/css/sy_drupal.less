@@ -1,0 +1,363 @@
+/*
+ * CORE CSS FOR CORE DRUPAL ELEMENTS:
+ * sy_drupal
+ */
+
+/* LESS.css variables */
+@import "variables.less";
+
+
+/***********************************
+******* DRUPAL NODES styles ********
+***********************************/
+
+   body#tinymce, 
+  body.forceColors #iframe, 
+  body #tinymce, 
+  body.mceContentBody 
+  { 
+  	background-color: #fff !important; 
+  	background-image: none; 
+  	border: none;
+  	color: @text-color;
+  }
+
+  .node-unpublished div.unpublished, /* The word "Unpublished" displayed beneath the content. */
+  .comment-unpublished div.unpublished
+  {
+    height: 0;
+    overflow: visible;
+    color: #d8d8d8;
+    font-size: 75px;
+    line-height: 1;
+    font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    word-wrap: break-word; /* A very nice CSS3 property */
+  }
+
+  .marker /* "New" or "Updated" marker for content that is new or updated for the current user */
+  {
+    color: #c00;
+  }
+
+  .node .picture /* The picture of the node author */
+  {
+  }
+
+  .node.node-unpublished .picture,
+  .comment.comment-unpublished .picture
+  {
+    position: relative; /* Otherwise floated pictures will appear below the "Unpublished" text. */
+  }
+
+/** Drupal comments **/
+  #comments /* Wrapper for the list of comments and its title */
+  {
+    margin: 1em 0;
+  }
+
+  .new /* "New" marker for comments that are new for the current user */
+  {
+    color: #c00;
+  }
+
+  .comment ul.links /* Comment links. See also the ul.links declaration above. */
+  {
+    margin: 1em 0;
+  }
+
+/** Drupal blocks **/
+  .block /* Block wrapper */
+  {
+    margin-bottom: 1em;
+  }
+
+  .more-link /* Aggregator, blog, and forum more link */
+  {
+    text-align: right;
+  }
+
+  #user-login-form /* Drupal's default login form */
+  {
+    text-align: left;
+  }
+
+  li a.active /* The active item in a Drupal menu */
+  {
+    color: #000;
+  }
+
+/** Drupal forms **/
+  .form-item, /* Wrapper for a form element (or group of form elements) and its label */
+  .form-checkboxes,
+  .form-radios
+  {
+    margin: 1em 0;
+  }
+
+  .form-item input.error, /* Highlight the form elements that caused a form submission error */
+  .form-item textarea.error,
+  .form-item select.error
+  {
+    border: 2px solid #c00;
+  }
+
+  .form-item label /* The label for a form element */
+  {
+    display: block;
+    font-weight: bold;
+  }
+
+  .form-item label.option /* The label for a radio button or checkbox */
+  {
+    display: inline;
+    font-weight: normal;
+  }
+
+  .form-required /* The part of the label that indicates a required field */
+  {
+    color: #c00;
+  }
+
+  .form-item .description /* The descriptive help text (separate from the label) */
+  {
+    font-size: 0.85em;
+  }
+
+  .form-checkboxes .form-item, /* Pack groups of checkboxes and radio buttons closer together */
+  .form-radios .form-item
+  {
+    margin: 0.4em 0;
+  }
+
+  .form-submit /* The submit button */
+  {
+  }
+
+  .container-inline div, .container-inline label /* Inline labels and form divs */
+  {
+    display: inline;
+  }
+
+  .tips /* Tips for Drupal's input formats */
+  {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+  }
+  
+  #views-ajax-pad .form-buttons .form-submit {
+		padding: .5em;
+  }
+
+/** OpenID **/
+  /* The default styling for the OpenID login link seems to assume Garland's
+   * styling of list items.
+   */
+  #user-login-form ul /* OpenID creates a new ul above the login form's links. */
+  {
+    margin-bottom: 0; /* Position OpenID's ul next to the rest of the links. */
+  }
+
+  #user-login-form li.openid-link /* The "Log in using OpenID" links. */
+  {
+    margin-top: 1em;
+    margin-left: -20px; /* Un-do some of the padding on the ul list. */
+  }
+
+  #user-login-form li.user-link /* The "Cancel OpenID login" links. */
+  {
+    margin-top: 1em;
+  }
+
+  #user-login ul
+  {
+    margin: 1em 0;
+  }
+
+  #user-login li.openid-link, /* The OpenID links on the /user form. */
+  #user-login li.user-link
+  {
+    margin-left: -2em; /* Un-do all of the padding on the ul list. */
+  }
+
+/** Drupal admin tables **/
+  /* We overrode these styles in html-elements.css, but restore them for the
+   * forms on the site.
+   */
+  form tbody
+  {
+    border-top: 1px solid #ccc;
+  }
+
+  form th
+  {
+    text-align: left;
+    padding-right: 1em;
+    border-bottom: 3px solid #ccc;
+  }
+
+  form tbody th
+  {
+    border-bottom: 1px solid #ccc;
+  }
+
+  form thead th
+  {
+    text-align: left;
+    padding-right: 1em;
+    border-bottom: 3px solid #ccc;
+  }
+  
+/*****************
+***** helper *****
+*****************/
+
+  div.clear {
+  	font-size: x-small;
+  	height: 1px;
+  	margin-top: -1px;
+  	clear: both;
+  }
+
+  .views-admin-links {
+  	width: 20em; 
+  	margin-top: -20px !important;
+  	ul {
+  		margin: 0;
+  	}
+  }
+  
+  div.block.with-block-editing  div.edit, 
+  div.edit {
+  	font-size: 9px; 
+  	top: -10px; 
+  	line-height: 10px;
+  	a:link, a:visited {
+  		color: @color-gray; 
+  		padding: 0;
+  	}
+  }
+  
+  .views-edit-view .defaulted {
+  	font-family: @font-stack-sans-italic;
+  }
+
+  #ui-datepicker-div {
+  	background-color: @page-color;
+  }
+/**
+ * shiny upload CSS
+ */
+ 
+ 
+	.file-uploads .file-file {
+		margin: 10px 20px;
+	}
+
+	.file-file img {
+		vertical-align:middle;
+		margin-right: 10px;
+	}
+
+	.file-file .file-link {
+		font-weight: bold;
+	}
+
+	.file-file .file-metadata {
+		margin-left: 46px;
+		font-size: .8em;
+	}
+
+	.file-file .file-metadata .file-size {
+		font-weight: bold;
+	}
+
+	/* hide file attachments in main node content body */
+	#content-area .file-uploads {
+		//display: none;
+	}
+
+	.icon-certificate {
+		color: @color-red; 
+		//text-indent: -999em;
+	}
+/** end helper classes **/
+
+/******************************* CONTENT ********************************/
+
+
+  .breadcrumb /* The path to the current page in the form of a list of links */
+  {
+    padding-bottom: 0; /* Undo system.css */
+  }
+  
+
+  h1.title, /* The title of the page */
+  h2.title, /* Block title or the title of a piece of content when it is given in a list of content */
+  h3.title /* Comment title */
+  {
+    margin: 0;
+  }
+  
+
+  .help /* Help text on a page */
+  {
+    margin: 1em 0;
+  }
+  
+
+  .more-help-link /* Link to more help */
+  {
+    font-size: 0.85em;
+    text-align: right;
+  }
+
+
+  ul.links /* List of links */
+  {
+    margin: 1em 0;
+    padding: 0;
+  }
+
+
+  ul.links.inline
+  {
+    margin: 0;
+    display: inline;
+  }
+
+
+  ul.links li
+  {
+    display: inline;
+    list-style-type: none;
+    padding: 0 0.5em;
+  }
+
+
+  .pager /* A list of page numbers when more than 1 page of content is available */
+  {
+    clear: both;
+    margin: 1em 0;
+    text-align: center;
+  }
+  
+
+  .pager a, .pager strong.pager-current
+  {
+    padding: 0.5em;
+  }
+
+
+  .feed-icons /* The links to the RSS or Atom feeds for the current list of content */
+  {
+    clear: both;
+    float: right;
+    margin: 1em 0;
+  }
+
+
+/**** /end CORE DRUPAL elements styles ****/

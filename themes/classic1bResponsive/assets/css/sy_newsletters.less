@@ -1,0 +1,380 @@
+/*
+ * CORE CSS FOR SY NEWSLETTER FEATURE:
+ * sy_newsletters
+ */
+
+/* LESS.css variables */
+@import "variables.less";
+
+
+/***********************************
+***** Newletter Feature Styles *****
+***********************************/
+  .view-Newsletter-Issues {
+  	clear: left;
+  	ul {
+  		list-style: none; 
+  		padding: 0;
+  		li {
+  			clear: left;
+  			list-style: none; 
+  			margin-top: 1.5em; 
+  			margin-left: @gutter-percent; 
+  			span.text {
+  				display: block; 
+  				float: left;
+  			}
+  			b.body {
+				font-family: @newsltr-std-text;
+				font-weight: normal; 
+  			}
+  			i {
+  				img {
+					border: solid 5px #fff; 
+					.box-shadow(3px, 3px, 10px, 0, 0, 0, 35); 
+					display: block;
+					float: left; 
+					margin-right: @gutter-percent; 
+					width: 25%; 
+				}
+  			}
+  		}
+  		li.first {
+  			margin-top: 0;
+  		}
+  	}
+  }
+
+
+.node-type-newsletter-issue #content-header {
+	width: 100%; 
+}
+
+.node-type-newsletter-issue .field-field-issue-date {
+	font-size: 1em; 
+	font-style: italic;
+	margin: 0 0 1em;
+}
+
+
+
+/** In this issue **/
+.node-type-newsletter-issue, 
+.node-type-newsletter-issue-full-stories, 
+#mail-page {
+	ul.masthead {
+		list-style: none; 
+		margin: 0; 
+		padding: 0;
+		li {
+			list-style: none; 
+			margin: 0; 
+			padding: 0;
+			i.image {
+				display: block; 
+				margin: 0; 
+				padding: 0; 
+				img {
+					display: block;
+					height: auto;
+					margin: 0; 
+					padding: 0; 
+				}
+			}
+			.masthead_details {
+				background-color: @newsltr-color-header; 
+				color: @newsltr-color-header-text;
+				display: block; 
+				font-size: @newsltr-mail-mast-text-size;
+				padding: .5em 1em;
+				text-align: right;
+				b.newsletter {
+					float: left; 
+					font-family: @newsltr-std-text;
+					font-weight: normal; 
+				}
+				em.date {
+	
+				}
+			}
+		}
+	}
+	
+	.field-field-intro-copy { /* Intro copy */
+		border-bottom: dotted 1px @color-gray;
+		float: left; 
+		width: 65%; 
+	}
+	ul.newsltr_articles {
+		list-style: none; 
+		margin: 0; 
+		padding: 0; 
+		li {
+			clear: left;
+			list-style: none; 
+			margin: 0; 
+			padding: 1.5em 0 0 0; 
+			i.image {
+				float: left; 
+				margin-right: 2 * @gutter-percent; 
+				max-width: 33%; 
+				width: 33%;
+			} 
+			b.body {
+				font-family: @newsltr-std-text;
+				font-weight: normal;
+			}
+			em.more_link {
+				font-style: normal;
+			}
+		}
+	}
+	.view-Newsletter-Articles.view-display-id-node_content_2 { /* In this issue */		
+		border-left: solid 1px #c8c8c8;
+		float: right; 
+		margin-left: 0; 
+		margin-top: 1em;
+		padding-bottom: 2em;
+		padding-left: @gutter-percent; 
+		width: 30%; 
+	}
+	.view-Newsletter-Articles.view-display-id-node_content_3 { /* Announcements */
+		border-left: solid 1px #c8c8c8;
+		float: right; 
+		margin-left: 0; 
+		padding-bottom: 2em; 
+		padding-left: @gutter-percent; 
+		width: 30%; 
+		b.body {
+			font-weight: normal;
+			font-family: @newsltr-std-text;
+		}
+	}
+	.view-Newsletter-Articles.view-display-id-node_content_5 { /* Upcoming Events */
+		border-left: solid 1px #c8c8c8;
+		clear:right;
+		float: right; 
+		margin-left: 0; 
+		padding-bottom: 2em; 
+		padding-left: @gutter-percent; 
+		width: 30%; 
+		b.date-title {
+			font-family: @newsltr-std-text;
+			font-weight: normal;
+		}
+	}
+	.view-Newsletter-Articles.view-display-id-node_content_6 { /* Supplemental Contact Info */
+		border-left: solid 1px #c8c8c8;
+		clear: right;
+		float: right; 
+		margin-left: 0; 
+		padding-left: @gutter-percent;  
+		width: 30%; 
+		b.body {
+			font-family: @newsltr-std-text;
+			font-weight: normal; 
+		}
+	}
+	.view-Newsletter-Articles.view-display-id-node_content_2, 
+	.view-Newsletter-Articles.view-display-id-node_content_3, 
+	.view-Newsletter-Articles.view-display-id-node_content_5,
+	.view-Newsletter-Articles.view-display-id-node_content_6 { /* Sidebar headers */
+		 .view-title, h2.title {
+			background-color: @newsltr-sidebar-hdr-color;
+			color: @newsltr-sidebar-hdr-color-text;
+			font-family: @newsltr-hdr-txt;			
+			font-size: @newsltr-sidebar-hdr-color-text-size;
+			font-weight: normal;
+			margin-bottom: 1em;
+			margin-left: -3 * @gutter-percent; 
+			padding: .3em 1em; 
+			text-transform: uppercase;
+		}
+		ul {
+			list-style: none; 
+			margin: 0; 
+			padding: 0; 
+			li {
+				list-style: none; 
+				margin: 0; 
+				padding: 0 0 1em 0;
+			}
+		}
+	}
+	.view-Newsletter-Articles.view-display-id-node_content_1, 
+	.view-Newsletter-Articles.view-display-id-node_content_7, 
+	.view-Newsletter-Articles.view-display-id-node_content_4 {
+		clear: left;
+		float: left; 
+		width: 65%; 
+	}
+	
+	.newsltr_sidebar_block {
+		clear: right;
+	}
+	.field-field-bottom-copy { /* Bottom copy */
+		border-top: dotted 1px @color-gray;
+		float: left; 
+		margin-top: 1em; 
+		padding-top: 1em; 
+		width: 65%; 
+	}
+}
+
+/* RESPONSIVE IMAGE styles for article body content */
+/*
+.node-type-newsletter-issue-full-stories {
+	.newsltr_articles {
+	  .imagecach-medium[style*="left"],
+	  .imagecach-thumbnail[style*="left"] {
+	  	margin-right: @gutter-percent; 
+	  	margin-bottom: @gutter-percent / 2;
+	  	float: left; 
+	  	clear: left;
+	  }
+	
+	  .imagecache-medium[style*="right"],
+	  .imagecache-thumbnail[style*="right"] {
+	  	margin-left: @gutter-percent; 
+	  	margin-bottom: @gutter-percent / 2;
+	  	float: right; 
+	  	clear: right;
+	  }
+	
+	  /* image cache preset specific styes */
+/*	  .imagecache-medium {
+	  	width: (50% - @gutter-percent); 
+	  	max-width: (50% - @gutter-percent);
+	  }
+	
+	  .imagecache-thumbnail {
+	  	width: (33% - @gutter-percent); 
+	  	max-width: (33% - @gutter-percent);
+	  }
+	}
+}
+*/
+
+/* NEWSLETTER mail styles */
+#mail-page {
+	margin-bottom: 0; 
+	padding: 0;
+	width: @newsltr-width;
+	background-color: @page-color; 
+	margin: 10px auto 0 auto; 
+	font-family: @newsltr-mail-std-text;
+	.views-admin-links {
+		display: none; 
+		visibility: hidden;
+	}
+	b, td {
+		font-family: @newsltr-mail-std-text;
+	}
+	#mail-header {
+		background-color: @newsltr-color-header; 
+		color: @newsltr-color-header-text; 
+		padding: 0; 
+		margin: 0;
+	}
+	#mail-body {
+		background-color: @page-color;	
+		margin-bottom: 0; 
+		padding: 0; 
+		h1 {
+			padding-left: 20px;
+			font-family: @newsltr-mail-hdr-text; 
+			font-weight: @newsltr-mail-hdr-text-wt;
+		}
+		h2, h3, h4 {
+			font-family: @newsltr-mail-hdr-text; 
+			font-weight: @newsltr-mail-hdr-text-wt;
+		}
+	  	.imagecache-medium {
+	  		width: (50% - @gutter-percent); 
+	  		max-width: (50% - @gutter-percent); 
+	  		float: left; 
+	 		margin-right: 2 * @gutter-percent; 
+		}
+	  	.imagecache-thumbnail {
+	  		width: (33% - @gutter-percent); 
+	  		max-width: (33% - @gutter-percent);
+	  		float: left; 
+	 		margin-right: 2 * @gutter-percent; 
+		}
+		.newsletter-main {
+			width: @newsltr-width-main; 
+			vertical-align: top; 
+			padding: 0 20px;
+			.field-field-intro-copy, 
+			.view-Newsletter-Articles.view-display-id-node_content_1, 
+			.view-Newsletter-Articles.view-display-id-node_content_7, 
+			.view-Newsletter-Articles.view-display-id-node_content_4, 
+			.field-field-bottom-copy {
+				width: 100%; 
+				float: none; 
+				clear: left; 
+				b.body {
+					font-weight: normal; 
+					font-family: @newsltr-mail-std-text;
+				}
+				.add_link {
+					visibility: hidden; 
+					display: none;
+				}
+			}
+		}
+		.newsletter-sidebar {
+			width: @newsltr-width-sidebar; 
+			background-color: @newsltr-color-sidebar; 
+			vertical-align: top;
+			.view-Newsletter-Articles.view-display-id-node_content_2, 
+			.view-Newsletter-Articles.view-display-id-node_content_3, 
+			.view-Newsletter-Articles.view-display-id-node_content_5, 
+			.view-Newsletter-Articles.view-display-id-node_content_6 { /* In this issue */
+				width: 100%; 
+				float: none; 
+				padding: 0; 
+				padding-left: 0 !important;
+				border-left: none;
+				.view-title, h2.title {
+					margin-left: 0 !important; 
+					font-family: @newsltr-mail-hdr-text; 
+					font-weight: @newsltr-mail-hdr-text-wt;
+				}
+				b.body {
+					font-weight: normal; 
+					font-family: @newsltr-mail-std-text;
+				}
+				.view-content {
+					padding-left: 10px; 
+					padding-right: 10px; 
+					h2.title {
+						margin-left: -10px !important; 
+						margin-right: -10px !important;
+					}
+				}
+				.edit_link {
+					visibility: hidden; 
+					display: none;
+				}
+			}
+	
+		}
+	}
+}
+
+#mail-closure {
+	margin: 0 auto 10px auto; 
+	padding: 0 0 20px 0;
+	width: @newsltr-width;
+	text-align: center;
+}
+#mail-footer {
+	display: block;
+	background-color: @newsltr-color-footer; 
+	color: @newsltr-color-footer-text; 
+	padding: 5px 10px; 
+}
+
+
+/**** /end Newsletter Feature styles ****/

@@ -1,0 +1,17 @@
+body{_text-align:center;}
+#page{_text-align:left;}
+#main{_zoom:1;}
+#content,#navbar,#sidebar-left,#sidebar-right{_display:inline;_overflow:hidden;_overflow-y:visible;}
+ul.primary li a,ul.primary li a .tab,ul.secondary li a,ul.secondary li a .tab{_display:inline-block;cursor:pointer;}
+ul.primary,ul.secondary{_width:auto;}
+ul.primary li a{_background:url(images/tab-left-ie6.png) no-repeat left -38px;}
+ul.primary li a .tab{_background:url(images/tab-right-ie6.png) no-repeat right -38px;}
+ul.primary li a:hover{_background:url(images/tab-left-ie6.png) no-repeat left -76px;}
+ul.primary li a:hover .tab{_background:url(images/tab-right-ie6.png) no-repeat right -76px;}
+ul.primary li.active a,ul.primary li.active a:hover{_background:url(images/tab-left-ie6.png) no-repeat left 0;}
+ul.primary li.active a .tab,ul.primary li.active a:hover .tab{_background:url(images/tab-right-ie6.png) no-repeat right 0;}
+div.messages,div.status,div.warning,div.error{_background-image:url(images/messages-status-ie6.png);}
+div.warning{_background-image:url(images/messages-warning-ie6.png);}
+div.error{_background-image:url(images/messages-error-ie6.png);}
+.node-unpublished .node-inner>*{position:relative;}
+.section-admin #content tr.even th,.section-admin #content tr.even td,.section-admin #content tr.odd th,.section-admin #content tr.odd td{border-bottom:1px solid #ccc;}

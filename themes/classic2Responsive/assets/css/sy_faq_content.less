@@ -1,0 +1,115 @@
+/*
+ * CORE CSS FOR SY FAQ FEATURE:
+ * sy_faq_content
+ */
+
+/* LESS.css variables */
+@import "variables.less";
+
+
+/*********************************
+******* FAQ Feature styles *******
+*********************************/
+  
+  /* collapsible view type */
+  .view-FAQ-Feature 
+  {
+	  .toggleAccordion 
+	  {
+			font-size: 12em / @font-base-size;
+	  }
+	  
+	  .accordion-header 
+	  {
+	  	color: inherit; 
+	  	background-image: url(../images/faq_toggle_open_off.png); 
+	  	background-position: 98% 50%; 
+	  	background-repeat: no-repeat;
+	  }
+	
+	  .accordion-header.accordion-header-hover 
+	  {
+	  	background-image: url(../images/faq_toggle_open_on.png); 
+	  	background-position: 98% 50%; 
+	  	background-repeat: no-repeat;
+	  }
+	
+	  .accordion-header-active 
+	  {
+	  	color: inherit; 
+	  	background-image: url(../images/faq_toggle_close_off.png); 
+	  	background-position: 98% 50%; 
+	  	background-repeat: no-repeat;
+	  }
+	
+	  .accordion-header-active.accordion-header-hover 
+	  {
+	  	background-image: url(../images/faq_toggle_close_on.png); 
+	  	background-position: 98% 50%; 
+	  	background-repeat: no-repeat;
+	  }
+	
+	  .views-accordion-item .accordion-content 
+	  {
+	  	color: inherit; 
+	  }
+	  
+	  .views-accordion-item .accordion-header, h3.accordion-header 
+	  {
+			background-color: @faq-color-odd;
+			border-top: 1px solid @faq-border-odd;
+			border-bottom: 1px solid @faq-border-odd;
+	  }
+	  .accordion-item-even .accordion-header 
+	  {
+			background-color: @faq-color-even;
+	    border-color: @faq-border-even;
+	  }
+	
+	  .accordion-active 
+	  {
+	  	border: none; 
+	  	border-bottom: solid 1px @faq-border-odd;
+	  }
+	  
+	  .views-field-upload-fid 
+	  {
+			font-size: 12em / @font-base-size;
+			label 
+			{
+				font-family: @font-stack-sans-bold;
+				font-weight: normal;
+			}
+	  }
+  }
+  /* collapsible view type */
+  ul.faq_list_open 
+  {
+  	list-style: none; 
+  	margin: 0; 
+  	padding: 0; 
+  	li 
+  	{
+  		list-style: none; 
+  		margin: 0; 
+  		padding: 1em 0; 
+  		h4 
+  		{
+  			margin: 0;
+  		}
+  		p 
+  		{
+  			margin-top: 0;
+  		} 
+  		p.answer 
+  		{
+  			margin: .5em;
+  		}
+  	}
+  }
+  
+  .views-accordion-item .accordion-content p {
+		margin: 1em 0;
+	}
+
+/**** /end FAQ Feature styles ****/

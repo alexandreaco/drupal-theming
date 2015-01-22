@@ -1,0 +1,70 @@
+/*
+ * CORE CSS FOR SY RESPONSIVE IMAGES:
+ * sy_responsive_images
+ */
+
+/* LESS.css variables */
+@import "variables.less";
+
+
+/*************************************
+****** RESPONSIVE IMAGE styles *******
+*************************************/
+
+
+  .image-caption-container  {
+  	max-width: 100%;
+  	width: 100%; 
+  }
+
+
+  .image-caption-container img  {
+  	max-width: 100%;
+  	width: 100%;
+  }
+
+
+  .image-caption-container[style*="left"] { 
+  	clear: left;
+  	float: left;
+  	margin-right: @gutter-percent; 
+  }
+
+
+  .image-caption-container[style*="right"] {
+  	clear: right;
+  	float: right; 
+  	margin-left: @gutter-percent;   	
+  }
+  
+  
+  .image-caption-container[style*="auto"] {
+		clear: both;
+		display: block;
+		float: none;
+		margin: 0 auto;
+  }
+  
+
+  /* image cache preset specific styes */
+  .image-caption-container.imagecache-medium, 
+  img.imagecache-medium {
+  	max-width: (50% - @gutter-percent);
+  	width: (50% - @gutter-percent); 
+  }
+
+
+  .image-caption-container.imagecache-thumbnail, 
+  img.imagecache-thumbnail {
+  	max-width: (33% - @gutter-percent);
+  	width: (33% - @gutter-percent); 
+  }
+  
+
+  .image-caption-container.imagecache-medium img.imagecache-medium, 
+  .image-caption-container.imagecache-thumbnail img.imagecache-thumbnail {
+  	max-width: 100%;
+  	width: 100%;
+  }
+  
+/**** /end RESPONSIVE IMAGE styles ****/

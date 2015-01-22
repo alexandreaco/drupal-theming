@@ -1,0 +1,52 @@
+/*
+ * CORE CSS FOR SY NEWS FEATURE:
+ * sy_groups
+ */
+
+/* LESS.css variables */
+@import "variables.less";
+
+
+/**********************************
+******* NEWS Feature styles *******
+**********************************/
+
+.news-feature {
+	article {
+		clear: left; 
+		padding-top: 2em; 
+		.image {
+			float: left; 
+			margin-right: 1em; 
+			width: 20%;
+		}
+		.date {
+			display: block;
+			font-family: @news-date-font;
+			font-size: @news-date-size;
+			font-style: normal;
+		}
+		.byline {
+			display: block;
+			font-family: @news-byline-font;
+			font-size: @news-byline-size;
+		}
+		.title {
+			font-family: @news-title-h3-font;
+			font-size: @news-title-h3-size;
+			font-weight: normal; 
+			margin-top: 0;
+		}
+		.body {
+			font-family: @news-body-font; 
+			font-weight: normal;
+			font-size: @news-body-size;
+		}
+		.more {
+			font-family: @news-more-font;
+			font-size: @news-more-size;
+			font-style: normal;
+		}
+	}
+}
+/**** /end NEWS Feature styles ****/

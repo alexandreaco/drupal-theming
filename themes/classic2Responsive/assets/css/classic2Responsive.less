@@ -1,0 +1,505 @@
+/*
+ * ZEN STYLES
+ *
+ * This is an example stylesheet. Sub-themes should NOT include the zen/zen.css
+ * file, but instead copy this CSS to their own stylesheets.
+ *
+ * In this stylesheet, we have included all of the classes and IDs from this
+ * theme's tpl.php files. We have also included many of the useful Drupal core
+ * styles to make it easier for theme developers to see them.
+ *
+ * Many of these styles are over-riding Drupal's core stylesheets, so if you
+ * remove a declaration from here, the styles may still not be what you want
+ * since Drupal's core stylesheets are still styling the element. See the
+ * drupal6-reference.css file for a list of all Drupal 5.x core styles.
+ *
+ * In addition to the style declarations in this file, other Drupal styles that
+ * you might want to override or augment are those for:
+ *
+ *   Book Navigation  See line 74  of Zen's drupal6-reference.css file
+ *   Forum            See line 197 of Zen's drupal6-reference.css file
+ *   Menus            See line 667 of Zen's drupal6-reference.css file
+ *   News Aggregator  See line 20  of Zen's drupal6-reference.css file
+ *   Polls            See line 287 of Zen's drupal6-reference.css file
+ *   Search           See line 320 of Zen's drupal6-reference.css file
+ *   User Profiles    See line 945 of Zen's drupal6-reference.css file
+ */
+
+/* LESS.css variables */
+@import "variables.less";
+
+.not-logged-in #content-header .tabs { display: none; visibility: hidden };
+#block-switchtheme-0 { 
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background: black; 
+	margin-bottom: 0;
+	z-index: 1000;
+	.content {
+		padding: .5em .25em;
+	}
+}
+
+#alert-inner {
+	padding: 0 3.125%;
+}
+
+#closure-blocks #block-menu_block-14 {
+	display: none;
+	visibility: hidden;
+}
+
+
+/******************************** NAVBAR ********************************/
+
+
+  /******** TEXT ALIGN CENTER ********/
+  
+  #navbar {
+  	position: relative;
+/*   	text-transform: uppercase; */
+  	z-index: 10;
+  	ul.nice-menu-down {
+  		font-size: 1em;
+  		text-align:center;
+  		li {
+  			display:inline-block;
+  			float:none;
+  			a {
+	  			padding: .75em 1em;
+  			}
+  			ul {
+  				text-align:left;
+  				top: 2.8em;
+  				z-index: 10;
+  			}
+  		}
+  	}
+  }
+  
+  #navbar-inner {
+	  padding: 0 @gutter-percent;
+  }
+
+
+  body {
+    background: @background-color; 
+  }
+
+  #page { 
+  	background: transparent;
+  	position: relative;
+  	z-index: 9;
+  }
+
+  header {
+    background: transparent; 
+    margin: 0; 
+    padding: 0; 
+    display: block;
+  	position: relative
+  }
+  
+  #header-inner {
+  	padding: 0;
+  }
+  
+  #toolbar {
+/* 	  .colorize_bg(@toolbar-color,.7); */
+		background: @toolbar-color;
+	  border-top: 3px solid @toolbar-border-color;
+	  position: relative;
+	  z-index: 9;
+  }
+  
+  #toolbar-inner {
+	  margin: 0 auto;
+	  max-width: @page-width-max;
+	  padding-bottom: 1px;
+  }
+  
+  #toolbar .block-menu, #toolbar .block-menu_block {
+	  margin: 0;
+  }
+  
+  #toolbar .block-menu ul.menu, #toolbar .block-menu_block ul.menu {
+	  text-align: center;
+  }
+  
+  #toolbar .block-menu ul.menu li, #toolbar .block-menu_block ul.menu li {
+	  text-align: center;
+  }
+  
+  #toolbar .block-menu ul.menu li a, #toolbar .block-menu_block ul.menu li a {
+	  border: none;
+	  color: @toolbar-a-link;
+	  font-weight: 700;
+  }
+  
+  #toolbar .block-menu ul.menu li a:hover, #toolbar .block-menu_block ul.menu li a:hover {
+	  color: @toolbar-a-hover;
+  }
+
+  #logo-title { 
+    margin: 0 auto;
+    max-width: 200px;
+    width: 90%;
+  	#logo {
+	    padding: 0;
+	    #logo-image { 
+		  	width: 100%; 
+		  	max-width: 100%; 
+		  	position: relative;
+		  	height: auto;
+		  }
+	  }
+  }
+
+  #main {
+  	.colorize_bg(#fff,.9);
+  }
+
+  #main-inner {
+  	padding-top: 2em; 
+  }
+
+  #block-search-0 {
+  	border: 1px solid @color-light-gray;
+  	border-radius: 0;
+  	float: none;
+  	margin: 1em auto;
+  	width: 90%;
+  	.form-text:focus {
+			outline:none
+			}
+  }
+ 
+
+
+/*******************************************
+******* RESPONSIVE IMAGE Styles ************
+*******************************************/
+
+  .image-caption-container {
+  	margin-bottom: .5em;
+  }
+
+  .image-caption-container .image-caption {
+  	font-size: .75em; 
+  	color: @color-gray;
+  }
+
+
+
+/*********************************
+****** HEADER IMAGE styles *******
+*********************************/
+#block-views-background_image-classic_2 {
+  margin-bottom: 0;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  
+  img {
+  	max-width: none;
+  	position: relative;
+  }
+}
+
+
+/************************************
+****** SIDEBAR general styles *******
+************************************/
+ 
+  #sidebar-right {
+	  h2 {
+			margin: 0; 
+			padding: .25em 0;
+			font-size: 18em / @font-base-size;
+			font-weight: normal; 
+	  }
+	  h3 {
+			font-size: 16em / @font-base-size;
+			font-weight: normal;
+		}
+		ul, p {
+			font-size: 14em / @font-base-size;
+		}
+  }
+
+
+
+/*******************************
+****** FOOTER BLOCK styles *****
+*******************************/
+
+	footer { 
+  	color: @footer-text; 
+  	background-color: @footer-color; 
+  	display: block;
+  }
+
+  footer a:link, 
+  footer a:visited {
+  	color: @footer-a-link;
+  }
+  
+  footer a:hover, 
+  footer a:active {
+  	color: @footer-a-hover;
+  }
+  
+  footer .block {
+  	float: left; 
+  }
+  
+  #footer-inner, #closure-blocks-inner {
+  	padding: 0 @gutter-percent;
+  }
+
+  #closure-blocks {
+  	color: @closure-text;
+  	font-size: 0.75em;
+  	margin-top: 1em;
+  }
+  
+  #closure-blocks a {
+  	color: @closure-text; 
+  	text-decoration: underline;
+  }
+	
+	footer {
+		border-top: 5px solid @footer-border-color;
+		font-size: 14em / @font-base-size;
+		padding-top: 1em;
+		h3 {
+	  		color: @footer-h3-color;
+		}
+  	address {
+		  font-style: normal;
+		  h3 {
+	  		color: @footer-h3-color;
+	  		font-family: @font-stack-serif;
+	  		font-size: 1.5em;
+	  		margin-bottom: 0.5em;
+	  	}
+  	}
+		#block-block-52 {
+			clear: both;
+			float: left;
+			position: relative;
+			margin: 1em 0;
+			ul {
+				margin: 0;
+				padding: 0;
+				li {
+					margin-right: 1em;
+					list-style-type: none;
+					display: inline;
+				}
+				li.last {
+					margin-right: 0;
+				}
+			}
+		}
+		#block-block-3 {
+			clear: both;
+		}
+	}
+	
+	.ss-social-circle {
+	  	font-size: 32em / @font-base-size;
+	  	margin: 0;
+	  	span.ext {
+	  		display:none;
+	  	}
+	  	li {  	
+	      a {
+		  	  text-decoration: none;
+	  	  }
+	  	}
+	}
+	
+	.front {
+		#content-area {
+			display: none;
+			visibility: hidden;
+		}
+	}
+	
+	#block-views-home_calendar_event-block_1 {
+		h2 {
+			margin-top: 0;
+		}
+		article {
+			clear: both;
+			i.date_grouping {
+				display: block;
+				float: left;
+				width: @date-grouping-width;
+				margin: 0 @date-grouping-margin-right 1em 0;
+				background: @date-grouping-background;
+				border: 1px solid @date-grouping-border;
+				font-style: normal;
+				b.date_day, i.date_mon-date {
+					display: block;
+					text-align: center;
+				}
+				b.date_day {
+					background-color: @date-day-background;
+					color: @date-day-color;
+					font-family: @date-day-font;
+					padding: 0.25em;
+				}
+				i.date_mon-date {
+					font-family: @date-month-font;
+					margin: .35em 0 .25em 0;
+				}
+			}
+			b.event_title {
+				display: block;
+				float: left;
+				width: @event-width;
+				margin-top: .25em;
+			}
+		}
+		.item-list .pager {
+			text-align: @home-events-align-pager;
+		}
+	}
+	
+	.date-display-single {
+		font-style: normal;
+		font-weight: 400;
+	}
+	
+	.event_title a {
+		font-weight: 400;
+		text-decoration: none;
+	}
+	
+	.event_title a:hover {
+		text-decoration: none;
+	}
+	
+	#block-views-home_news_display-block_1 {
+		article {
+			margin-bottom: 3em;
+			padding-top: 0;
+		}
+		h2 {
+			margin-top: 0;
+		}
+		h3.title {
+			font-size: @news-h3-font-size;
+			a {
+				text-decoration: none;
+			}
+		}
+		i.image {
+			float: left;
+			border: @news-image-border-size solid @news-image-border-color;
+			background: #fff;
+			padding: .25em .25em 0 .25em;
+			margin: 0 1em .5em 0;
+			img {
+				max-width: 250px;
+				width: 100%;
+			}
+		}
+		.date {
+			display: block;
+			margin-bottom: .3em;
+		}
+		b.body {
+			font-family: @news-body-font;
+			font-weight: 400;
+		}
+		.view-footer {
+			text-align: @home-news-align-pager;
+		}
+	}
+
+
+/********************************
+****** MEDIA QUERY styles *******
+********************************/
+
+
+@media screen and (min-width: 801px) {
+
+ 	#block-search-0 {
+	 	margin: .5em auto;
+	 	width: 85%;
+ 	}
+ 	
+ 	footer {
+	  	address {
+		  	.locality {
+			  	float: left;
+			  	margin-right: 0.75em;
+			  	padding-right: 0.75em;
+		  	}
+		  	.phone {
+			  	float: left;
+		  	}
+	  	}
+		#block-block-52 {
+			clear: none;
+			float: right;
+		}
+	}
+	
+
+}/*/mediaquery*/
+
+
+@media screen and (min-width: 900px) {
+
+	#logo-title {
+		clear: both;
+		float: left;
+		margin: 1em 0;
+	}
+	
+	#toolbar {
+		min-height: 45px;
+	}
+	
+	#toolbar .block-menu, #toolbar .block-menu_block {
+		float: left;
+	}
+	
+	#block-search-0 {
+		margin: .25em auto;
+		width: 35%;
+		float: right;
+		clear: none;
+	}
+	
+	.front #navbar {
+		margin-top: 350px;
+	}
+	
+	#block-views-home_calendar_event-block_1 {
+		float: left;
+		margin-right: 2%;
+		width: 33%;
+	}
+	
+	#block-views-home_news_display-block_1 {
+		float: left;
+		width: 65%;
+	}
+  
+
+}/*/mediaquery*/
+
+
+@media screen and (orientation:landscape) and (device-width:320px) and (device-height: 480px) {
+	body {
+		width: 480px;
+	}
+}
+

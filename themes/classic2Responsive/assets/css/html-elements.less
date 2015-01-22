@@ -1,0 +1,514 @@
+/****
+ **** HTML ELEMENT STYLING
+ ****/
+
+/* LESS.css variables */
+@import "variables.less";
+
+
+/** fonts **/
+  /*
+   * Our font size and line height declarations are based on the following ALA
+   * article:
+   *   http://www.alistapart.com/articles/howtosizetextincss
+   *
+   * All modern browsrs use a 16px default font size. Specifying the font-size
+   * and line-height in ems (relative to the 16px default font) allows the user
+   * to resize the font in the browser and produces the most consistent results
+   * across different browsers.
+   */
+  body
+  {
+    font-size: 100%; /* Fixes exaggerated text resizing in IE6 and IE7 */
+  }
+
+  #page
+  {
+    /*
+     * To use a 12px font size on the page, delete the 14px declarations.
+     * to use a 14px font size on the page, delete the 12px declarations.
+     */
+
+    /* Use a 12px base font size with a 16px line height */
+    //font-size: 0.75em; /* 16px x .75 = 12px */
+    //line-height: 1.333em; /* 12px x 1.333 = 16px */
+
+    /* Use a 14px base font size with a 18px line height */
+    //font-size: 0.875em; /* 16px x .875 = 14px */
+    //line-height: 1.286em; /* 14px x 1.286 = 18px */
+    /* Use a 14px base font size with a 18px line height */
+    //font-size: @font-base-size / 16em; /* 16px */
+    //line-height: 20em / @font-base-size; /* 20px */
+    
+    /* Custom : As defined in variables.css */
+    font-size: @page-font-size;
+    line-height: @page-line-height;
+    
+  }
+
+  body, caption, th, td, input, textarea, select, option, legend, fieldset
+  {
+    /* The following font family declarations are based on the Microsoft core
+     * web fonts which are common fonts available on most computer systems. The
+     * Bitstream Vera fonts are commonly available on Linux systems where the MS
+     * fonts are less common.
+     *
+     * A user's web browser will look at the comma-separated list and will
+     * attempt to use each font in turn until it finds one that is available
+     * on the user's computer. The final "generic" font (sans-serif or serif)
+     * hints at what type of font to use if the web browser doesn't find any
+     * of the fonts in the list.
+
+    font-family: "Times New Roman", Times, Georgia, "Bitstream Vera Serif", serif;
+    font-family: Times, "Times New Roman", Georgia, "Bitstream Vera Serif", serif;
+    font-family: Georgia, "Times New Roman", "Bitstream Vera Serif", serif;
+
+    font-family: Verdana, Tahoma, Arial, Helvetica, "Bitstream Vera Sans", sans-serif;
+    font-family: Tahoma, Verdana, Arial, Helvetica, "Bitstream Vera Sans", sans-serif;
+    font-family: Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+    font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;
+
+    font-family: "Bitstream Vera Sans Mono", "Courier New", monospace;
+
+     */
+
+    font-family: @body-font;
+    
+  }
+
+.wf-inactive body, 
+.wf-inactive caption, 
+.wf-inactive th, 
+.wf-inactive td, 
+.wf-inactive input, 
+.wf-inactive textarea, 
+.wf-inactive select,
+.wf-inactive option,
+.wf-inactive legend, 
+.wf-inactive fieldset, 
+.wf-inactive #page {
+	font-family: @font-stack-sans-fallback; 
+	font-size: .92em; 
+	letter-spacing: 0.01em; 
+	line-height: 1.6em;
+}
+  pre, code
+  {
+    font-size: 1.1em; /* Monospace fonts can be hard to read */
+    font-family: "Bitstream Vera Sans Mono", "Courier New", monospace;
+  }
+
+/** headings **/
+  h1
+  {
+    font-family: @font-stack-h1;
+    font-weight: @h1-font-weight;
+    color: @color-h1;
+    font-size: @h1-font-size;
+    line-height: 1.3em;
+    margin-top: 0;
+    margin-bottom: 0.5em; /* 0.5em is equavalent to 1em in the page's base font.
+                             Remember, a margin specified in ems is relative to
+                             the element's font-size, not to the pages' base
+                             font size. So, for example, if we want a 1em margin
+                             (relative to the base font), we have to divide that
+                             length by the element's font-size:
+                             1em / 2em = 0.5em */
+  }
+
+.wf-inactive h1 {
+	font-family: @font-stack-serif-fallback;
+	font-weight: normal;
+  font-size: 1.965em;
+  letter-spacing: 0.015em; 
+	line-height: 1.05em; 
+	margin: 1em 0 1em 0;
+}
+
+
+  h2
+  {
+    font-family: @font-stack-h2;
+    font-weight: @h2-font-weight;
+    color: @color-h2;
+    font-size: @h2-font-size;
+    line-height: 1.3em;
+    margin-top: 0.667em; /* Equivalent to 1em in the page's base font: 1 / 1.5 = 0.667em */
+    margin-bottom: 0.667em;
+  }
+
+  h3
+  {
+    font-family: @font-stack-h3;
+    font-weight: @h3-font-weight;
+    color: @color-h3;
+    font-size: @h3-font-size;
+    line-height: 1.3em;
+    margin-top: 0.769em; /* Equivalent to 1em in the page's base font: 1 / 1.3 = 0.769 */
+    margin-bottom: 0.769em;
+  }
+
+  h4
+  {
+    font-family: @font-stack-h4;
+    font-weight: @h4-font-weight;
+    color: @color-h4;
+    font-size: @h4-font-size;
+    line-height: 1.3em;
+    margin-top: 0.909em; /* Equivalent to 1em in the page's base font: 1 / 1.1 = 0.909 */
+    margin-bottom: 0.909em;
+  }
+
+  h5
+  {
+    font-family: @font-stack-h5;
+    font-weight: @h5-font-weight;
+    color: @color-h5;
+    font-size: @h5-font-size;
+    line-height: 1.3em;
+    margin-top: 0.909em; /* Equivalent to 1em in the page's base font: 1 / 1.1 = 0.909 */
+    margin-bottom: 0.909em;
+  }
+
+  h6
+  {
+    font-family: @font-stack-h6;
+    font-weight: @h6-font-weight;
+    color: @color-h6;
+    font-size: @h6-font-size;
+    line-height: 1.3em;
+    margin-top: 0.909em; /* Equivalent to 1em in the page's base font: 1 / 1.1 = 0.909 */
+    margin-bottom: 0.909em;
+  }
+
+
+/** block-level elements **/
+  p, ul, ol, dl, pre, table, fieldset, blockquote
+  {
+    margin: 1em 0;
+  }
+
+/** lists **/
+  /* standardize list item indentation */
+  ul, ol
+  {
+    margin-left: 0;
+    padding-left: 2em;
+  }
+
+  .block ul, /* Drupal overrides */
+  .item-list ul
+  {
+    margin: 1em 0;
+    padding: 0 0 0 2em;
+  }
+
+  ul ul, ul ol,
+  ol ol, ol ul,
+  .block ul ul, .block ul ol,
+  .block ol ol, .block ol ul,
+  .item-list ul ul, .item-list ul ol,
+  .item-list ol ol, .item-list ol ul
+  {
+    margin: 0;
+  }
+
+  li
+  {
+    margin: 0;
+    padding: 0;
+  }
+
+  .item-list ul li /* Drupal override */
+  {
+    margin: 0;
+    padding: 0;
+    list-style: inherit;
+  }
+
+  ul.menu li, /* Drupal override */
+  li.expanded,
+  li.collapsed,
+  li.leaf
+  {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul          { list-style-type: disc; }
+  ul ul       { list-style-type: circle; }
+  ul ul ul    { list-style-type: square; }
+  ul ul ul ul { list-style-type: circle; }
+  ol          { list-style-type: decimal; }
+  ol ol       { list-style-type: lower-alpha; }
+  ol ol ol    { list-style-type: decimal; }
+
+  dt
+  {
+    margin: 0;
+    padding: 0;
+  }
+
+  dd
+  {
+    margin: 0 0 0 2em;
+    padding: 0;
+  }
+
+
+/** links **/
+  /* The order of link states are based on Eric Meyer's article:
+   * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
+   */
+  a:link
+  { 
+  	color: @a-link;
+  }
+
+  a:visited
+  {
+  	color: @a-visited;
+  }
+
+  a:hover,
+  a:focus
+  {
+  	color: @a-hover;
+  }
+
+  a:active
+  {
+  	color: @a-active;
+  }
+
+/** tables **/
+  /* Override Drupal default CSS */
+  table
+  {
+    border-collapse: collapse;
+    width: 100%; /* Prevent cramped-looking tables */
+  }
+
+  th,
+  thead th,
+  tbody th
+  {
+    text-align: left;
+    padding-right: 0;
+    border-bottom: none;
+  }
+
+  tbody
+  {
+    border-top: none;
+  }
+
+/** abbreviations **/
+  abbr
+  {
+    border-bottom: 1px dotted #666;
+    cursor: help;
+    white-space: nowrap;
+  }
+
+  /* Date-based "abbreviations" show computer-friendly timestamps which are not
+     human-friendly. */
+  abbr.created
+  {
+    border: none;
+    cursor: auto;
+    white-space: normal;
+  }
+
+/** images **/
+
+  img
+  {
+    border: 0; 
+    max-width: 100%;
+    height: auto;
+  }
+
+/** horizontal rules **/
+  hr
+  {
+    height: 1px;
+    border: 1px solid #666;
+  }
+
+/** forms **/
+  form
+  {
+    margin: 0;
+    padding: 0;
+  }
+
+  fieldset
+  {
+    margin: 1em 0;
+    padding: 0.5em;
+  }
+
+/** Form Styles **/
+input[type="text"], 
+input[type="password"] {
+  font-family: @form-input-font;
+	padding: .5em;
+	border: solid 1px @form-input-border-color; 
+	background-color: @form-input-background;
+}
+
+
+input[type="submit"],
+.directory-styles .button-show-all a {
+
+	padding: .8em 1.5em .75em 1.5em;
+	font-family: @form-submit-font;
+	font-size: @form-submit-font-size;
+	font-weight: normal; 
+	line-height: 1;
+	color: @form-submit-color; 
+	border: none; 
+	background: @form-submit-background;
+
+}
+
+input[type="submit"]:hover,
+.directory-styles .button-show-all a:hover {
+	cursor: pointer;
+	background: @form-submit-background-hover;
+}
+
+#webform-components 
+{
+	td 
+	{
+		width: 100%;
+	}
+}
+
+.webform-container-inline {
+	.form-item {
+		label {
+			clear: both;
+			display: inline;
+			float: left;
+			margin: 0 2% 1em 0;
+			width: 30%;
+		}
+		input.form-text {
+			float: left;
+			width: 60%;
+		}
+	}
+}
+
+.webform-component {
+	clear: both;
+}
+
+
+blockquote {
+	border-left: @blockquote-border-size solid @blockquote-border-color;
+	color: @blockquote-color;
+	font-family: @blockquote-font;
+	font-size: @blockquote-font-size;
+	margin: 1.5em 0;
+	padding: .5em 2em;
+}
+
+/* Button Styles */
+
+.btn-1, a.btn-1 {	//outline
+
+/* 	border-radius: 0.75em; */
+	color: @button-color;
+	background: none;
+	padding: 0.5em 3em;
+	min-width: @button-min-width;
+	display: block;
+	font-family: @button-font;
+	font-size: @button-font-size;
+	text-align: center;
+	border: @button-border-size solid @button-color;
+	transition-duration: @button-transition-duration-in;
+	-webkit-transition-duration: @button-transition-duration-in; /* Safari */
+	text-decoration: none;
+	
+	&:hover{
+		background: @button-color;
+		color: @button-a-hover-color;
+		transition-duration: @button-transition-duration-out;
+		-webkit-transition-duration: @button-transition-duration-out; /* Safari */
+		
+		a {
+			color: @button-a-hover-color;
+		}
+	}
+	
+	a {
+		color: @button-color;
+		text-decoration: none;
+	}
+	
+	span.ext {
+		display:none
+	}
+}
+
+.btn-2, a.btn-2 {	//solid
+
+/* 	border-radius: 0.75em; */
+	color: @button-a-hover-color;
+	padding: 0.5em 3em;
+	display: block;
+	font-family: @button-font;
+	font-size: @button-font-size;
+	min-width: @button-min-width;	
+	text-align: center;
+	background: @button-color;
+	border: @button-border-size solid @button-color;
+	transition-duration: @button-transition-duration-in;
+	-webkit-transition-duration: @button-transition-duration-in; /* Safari */
+	text-decoration: none;
+	
+	&:hover{
+		background: @button-a-hover-color;
+		color: @button-color;
+		transition-duration: @button-transition-duration-out;
+		-webkit-transition-duration: @button-transition-duration-out; /* Safari */
+		
+		a {
+			color: @button-color;
+		}
+	}
+	
+	a {
+		color: @button-a-hover-color;
+		text-decoration: none;
+	}
+	
+	span.ext {
+		display:none
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.btn-1, .btn-2,
+	a.btn-1, a.btn-2 {
+		display: inline-block;
+		margin-bottom: 0;
+	}
+	
+}
+
+
+@media screen and (min-width: 801px) {
+	
+		input[type="text"], 
+		input[type="password"],
+		input[type="email"] {
+			width: auto;
+		}
+	
+}

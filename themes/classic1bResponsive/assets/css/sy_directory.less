@@ -1,0 +1,259 @@
+/*
+ * CORE CSS FOR SY DIRECTORY FEATURE:
+ * sy_directory
+ */
+
+/* LESS.css variables */
+@import "variables.less";
+
+
+/*******************************
+****** DIRECTORY styles *******
+*******************************/
+
+  .view-directory.view-display-id-page_1 .views-row {
+  	margin-bottom: .5em;
+  }
+  
+  .directory-styles { 
+  	.view-header { 
+	  	float: right;
+  	}
+  	
+  	.views-exposed-form {
+	  	label {
+		  	font-weight: normal;
+	  	}
+  	}
+  	
+  	.view-filters {
+	  	float: right; 
+	  	margin-right:1em;
+  	}
+  	
+  	.attachment-before {
+	  	padding: 1.65em 0 1.25em 0; 
+	  	border-bottom: solid 3px @color-light-gray; 
+  	}
+  	
+  	.button-show-all {
+  	  padding-top: 33px;
+			
+			a {
+				text-decoration: none;
+			}
+		  
+		  a:hover {
+				cursor: pointer;
+				background: @submit-button-hover; 	  
+		  }
+    }
+    
+  	.view-content 
+  	{
+  		article {
+  			display: block;
+  			clear: both;
+  			margin-bottom: 1em;
+  			
+  			i, b {
+  				display: block;
+  				font-style: normal;
+  				font-weight: normal;
+  				font-family: @font-stack-sans;
+  			} 
+  			
+  			p {
+	  			margin-top: 0;
+  			}
+  			
+  			.global_image {
+  				width: 20%;
+  				margin: 0 3% 2em 0; 
+  				float: left;
+  			}
+  			
+  			.details {
+	  			float: left; 
+	  			width: 75%;
+  			}
+  			
+  			.directory_name {
+	  			float: left; 
+	  			margin-top: 0; 
+	  			line-height: 1em; 
+	  			margin-right: .5em;
+  			} 
+  			
+  			.is_admin {
+	  			display: block; 
+	  			float: left;
+	  			margin-right: .5em;
+  			}
+  			
+  			.edit_node {
+	  			display: block; 
+	  			float: left;
+	  			margin-right: .5em;
+  			}
+  			
+  			.directory_title {
+	  			display: block;
+	  			clear: left;
+  			}
+  			
+  			.phone {
+	  			display: block;
+	  			clear: left;
+  			}
+  			
+  			.grad_year {
+	  			display: inline; 
+	  			margin: 0; 
+	  			font-size: 21em / @font-base-size; 
+	  			color: @directory-name;
+	  		}
+	  		
+  			legend {
+  				a {
+  					text-decoration: none;
+  					color: @directory-read-more;
+  				}
+  				a:hover {
+  					text-decoration: underline;
+  				}
+  				a:visited {
+  					color: @color-dark-gray;
+  				}
+  			}
+  			
+  			.collapsed-text {
+  				h4 {
+  					margin-bottom: 0;
+  				}
+  				p {
+  					margin-top: 0;
+  				}
+  			}
+  		}
+  		article.first {
+	  		margin-top: 1.5em;
+  		}
+  	}
+  	
+  	.view-empty {
+	  	clear: both;
+  	}
+  }
+  
+  /*By User Directory Overrides*/
+  .view-directory-by-user { 
+  	.view-header { 
+	  	float: left;
+	  	width: 100%;
+	  	
+	  	.alpha-pager {
+		  	float: left;
+		  	a.active {
+			  	background: @a-link;
+			  	color: #fff;
+			  	padding: 0 0.05em;
+			  	text-decoration: none;
+		  	}
+	  	}
+	  	
+	  	.button-show-all {
+		  	float: right;
+		  	padding-top: 0;
+	  	}
+  	}
+  	.view-filters {
+	  	border-bottom: 3px solid @color-light-gray;
+	  	float: left;
+	  	margin-bottom: 1em;
+	  	padding-top: 1em;
+	  	width: 100%;
+  	}
+  }
+  
+  /*Sidebar directories view*/
+  	.view-Directory-by-Department.view-display-id-block_1 {
+  		article {
+  			clear: both;
+  			margin-bottom: 1.5em;
+	  		b, i {
+	  			display: block;
+  				font-style: normal;
+  				font-weight: normal;
+  				font-family: @font-stack-sans;
+	  		}
+  			.email {
+  				display: block;
+  			}
+  			
+	  		.name, .grad_year {
+	  			display: inline; 
+	  			margin: 0; 
+	  			font-size: 21em / @font-base-size; 
+	  			color: @directory-name;
+	  		}
+  		}
+  	}
+  	
+  	/* Parent Directory Styles */
+  	
+  	
+/*********************************
+****** DEPARTMENT styles *******
+*********************************/
+	.view-Departments {
+		.view-footer {
+			float: right;
+		}
+	}
+	
+	.node-type-department 
+	{
+		.view-directory-by-department 
+		{
+			.view-content 
+			{
+				article 
+				{
+					.global_image {
+						width: 100%;
+						float: none;
+						clear: both;
+						margin: 0 0 .5em 0;
+					}
+					
+					.directory_name {
+						h3 {
+							display: inline;
+							a {
+								font-size: 1.125em;
+							}
+							em {
+								display: none;
+							}
+						}
+						
+						a {
+							font-size: .85em;
+						}
+					}
+					
+					.directory_title {
+						font-family: @font-stack-sans-bold;
+						font-weight: bold;
+						margin-bottom: .5em;
+					}
+				}
+			}
+		}
+	}
+
+
+/**** /end DEPARTMENT Feature styles ****/
+
+/**** /end DIRECTORY Feature styles ****/

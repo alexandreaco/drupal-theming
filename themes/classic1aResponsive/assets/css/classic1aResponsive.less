@@ -1,0 +1,787 @@
+/*
+ * ZEN STYLES
+ *
+ * This is an example stylesheet. Sub-themes should NOT include the zen/zen.css
+ * file, but instead copy this CSS to their own stylesheets.
+ *
+ * In this stylesheet, we have included all of the classes and IDs from this
+ * theme's tpl.php files. We have also included many of the useful Drupal core
+ * styles to make it easier for theme developers to see them.
+ *
+ * Many of these styles are over-riding Drupal's core stylesheets, so if you
+ * remove a declaration from here, the styles may still not be what you want
+ * since Drupal's core stylesheets are still styling the element. See the
+ * drupal6-reference.css file for a list of all Drupal 5.x core styles.
+ *
+ * In addition to the style declarations in this file, other Drupal styles that
+ * you might want to override or augment are those for:
+ *
+ *   Book Navigation  See line 74  of Zen's drupal6-reference.css file
+ *   Forum            See line 197 of Zen's drupal6-reference.css file
+ *   Menus            See line 667 of Zen's drupal6-reference.css file
+ *   News Aggregator  See line 20  of Zen's drupal6-reference.css file
+ *   Polls            See line 287 of Zen's drupal6-reference.css file
+ *   Search           See line 320 of Zen's drupal6-reference.css file
+ *   User Profiles    See line 945 of Zen's drupal6-reference.css file
+ */
+
+/* LESS.css variables */
+@import "variables.less";
+
+#block-switchtheme-0 { 
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background: black; 
+	margin-bottom: 0;
+	z-index: 1000;
+	.content {
+		padding: .5em .25em;
+	}
+}
+
+#alert-inner {
+	padding: 0 3.125%;
+}
+
+#closure-blocks #block-menu_block-14 {
+	display: none;
+	visibility: hidden;
+}
+
+.more-link {
+	margin-top: 5em;
+}
+
+#block-block-56 .btn-1 {
+	background: @color-orange;
+	border: @button-border-size solid @color-orange;
+	color: #fff;
+	
+	&:hover {
+		color: @color-orange;
+		background: #FFF;
+		border: @button-border-size solid @color-orange;
+	}
+}
+
+
+/******************************** NAVBAR ********************************/
+
+
+  /******** TEXT ALIGN CENTER ********/
+  
+  #navbar {
+  	clear: both;
+  	ul {
+  		text-align: @navbar-text-align;
+  		li {
+  			display:inline-block;
+  			float:none;
+  			ul {
+  				text-align:left;
+  				top: 2.5em;
+  			}
+  		}
+  	}
+  }
+
+  
+  #navbar-inner {
+	  padding: 0 @gutter-percent;
+  }
+
+
+  body {
+    background: @background-color; 
+  }
+
+  #page { 
+  	z-index: 9;
+  }
+  
+  #page-inner {
+	  border-bottom: 1px solid @page-border-color;
+	  border-left: 1px solid @page-border-color;
+	  border-right: 1px solid @page-border-color;
+  }
+
+  header {
+    background: @header-color; 
+    margin: 0; 
+    padding: 0; 
+    display: block;
+  	position: relative
+  }
+  
+  #header-inner {
+  	padding: 0;
+  }
+  
+  #toolbar .block-menu, #toolbar .block-menu_block {
+	  margin: 0;
+  }
+  
+  #toolbar .block-menu ul.menu, #toolbar .block-menu_block ul.menu {
+	  text-align: @toolbar-text-align-mobile;
+  }
+  
+  #toolbar .block-menu ul.menu li, #toolbar .block-menu_block ul.menu li {
+	  text-align: center;
+  }
+  
+  #toolbar .block-menu ul.menu li a, #toolbar .block-menu_block ul.menu li a {
+	  color: @toolbar-a-link;
+	  font-size: @toolbar-font-size;
+	  font-weight: @toolbar-font-weight;
+  }
+  
+  #toolbar .block-menu ul.menu li a:hover, #toolbar .block-menu_block ul.menu li a:hover,
+  #toolbar .block-menu ul.menu li.active-trail {
+	  color: @toolbar-a-hover;
+	  a {
+	  	color: @toolbar-hover;
+	  	border-bottom: 5px solid @toolbar-hover;
+	  }
+  }
+
+  #logo-title { 
+    margin: 1em auto;
+    width: 90%;
+  	#logo {
+  		max-width: 200px;
+  		margin: 0 auto;
+	    padding: 0;
+	    #logo-image { 
+		  	width: 75%; 
+		  	max-width: 100%; 
+		  	position: relative;
+		  	height: auto;
+		  }
+	  }
+	  
+	  #site-slogan {
+	  	text-align: center;
+	  	h2 {
+	  		//font-style: italic;
+	  		//font-family: @font-stack-serif-italic;
+	  		//font-size: 1.65em;
+	  		//font-weight: 300;
+	  		color: @color-light-green;
+	  	}
+	  }
+  }
+
+  #main {
+  	background-color: @page-color;
+  }
+
+  #main-inner {
+  	padding-top: 2em; 
+  }
+
+  #block-search-0 {
+  	border: 1px solid @search-color;
+  	.border-radius(@search-border-radius, @search-border-radius, @search-border-radius, @search-border-radius);
+  	float: right;
+  	margin: 1em auto;
+  	margin-right: 1em;
+  	width: 77%;	// was 90%
+  	display: inline;
+		clear: none !important;
+  	
+  	.form-text:focus {
+			outline:none
+		}
+  }
+  
+  #block-block-57 {
+ 		float: right;
+ 		display: inline;
+ 		background: transparent url('../images/amazon.png') center 15px no-repeat;
+ 		margin-right: 1em;
+ 		
+ 		#amazon-link {
+ 			width: 34px;
+ 			height: 34px;
+ 		}
+ 		
+ 		&:hover {
+ 			background-image: url('../images/amazon-hover.png');
+ 		}
+ 	}	
+  
+  #header-blocks {
+	  clear: both;
+  }
+ 
+
+
+/*******************************************
+******* RESPONSIVE IMAGE Styles ************
+*******************************************/
+
+  .image-caption-container {
+  	margin-bottom: .5em;
+  }
+
+  .image-caption-container .image-caption {
+  	font-size: @image-caption-font-size; 
+  	color: @image-caption-font-color;
+  }
+
+
+
+/*********************************
+****** HEADER IMAGE styles *******
+*********************************/
+
+  .view-interior-header-image {
+	  line-height: 0;
+	  margin-bottom: 0;
+	  position: relative;
+  }
+  
+  #header-blocks .block {
+	  margin-bottom: 0;
+  }
+  
+  #content-top {
+		.flex-direction-nav {
+			display: none;
+			visibility: hidden;
+		}
+		.flex-control-nav {
+			bottom: 0;
+			.align-page-slider-flex-nav();
+			width: auto;
+		}
+		.flex-control-nav li a {
+			background: @page-caption-color - #222;
+			border-radius: 100px;
+		}
+		.flex-control-nav li a:hover {
+			background: @page-caption-color;
+		}
+		.flex-control-nav li a.active {
+			background: @color-light-gray;
+		}
+	}
+
+
+
+/************************************
+****** SIDEBAR general styles *******
+************************************/
+ 
+  #sidebar-right {
+	  h2 {
+			margin: 0; 
+			padding: .25em 0;
+			font-size: @sidebar-right-h2-size;
+			font-weight: normal; 
+	  }
+	  h3 {
+			font-size: @sidebar-right-h3-size;
+			font-weight: normal;
+		}
+		ul, p {
+			font-size: @sidebar-right-text-size;
+		}
+  }
+
+	// Left Sidebar Callout
+	#block-block-56 {
+		.hide()
+	}
+
+
+
+/*******************************
+****** FOOTER BLOCK styles *****
+*******************************/
+
+	footer { 
+  	color: @footer-text; 
+  	background-color: @footer-color; 
+  	display: block;
+  }
+
+  footer a:link, 
+  footer a:visited {
+  	color: @footer-a-link;
+  }
+  
+  footer a:hover, 
+  footer a:active {
+  	color: @footer-a-hover;
+  }
+  
+  footer .block {
+  	float: left; 
+  }
+  
+  #footer-inner, #closure-blocks-inner {
+  	padding: 0 @gutter-percent;
+  }
+
+  #closure-blocks {
+  	color: @closure-text;
+  	font-size: @closure-font-size;
+  	margin-top: 1em;
+  }
+  
+  #closure-blocks a {
+  	color: @closure-a-link; 
+  	text-decoration: underline;
+  }
+	
+	footer {
+		border-top: @footer-border-size solid @footer-border-color;
+		font-size: @footer-font-size;
+		padding-top: 1em;
+		h3 {
+	  	color: @footer-h3-color;
+		}
+		h5 {
+			color: @footer-h4-color;
+			font-family: @font-stack-serif;
+		}
+  	address {
+		  font-style: normal;
+		  h3 {
+	  		color: @footer-h3-color;
+	  		font-family: @footer-h3-font;
+	  		font-size: @footer-h3-font-size;
+	  		margin-bottom: 0.5em;
+	  	}
+  	}
+		#block-block-52 {
+			clear: both;
+			float: left;
+			position: relative;
+			margin: 1em 0;
+			ul {
+				margin: 0;
+				padding: 0;
+				li {
+					margin-right: 1em;
+					list-style-type: none;
+					display: inline;
+				}
+				li.last {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	
+	.ss-social-circle {
+	  	font-size: @social-circle-font-size;
+	  	margin: 0;
+	  	span.ext {
+	  		display:none;
+	  	}
+	  	li {  	
+	      a {
+		  	  text-decoration: none;
+		  	  color: @social-circle-a-link;
+		  	  &:hover {
+		  			color: @social-circle-a-hover;
+		  	  }
+	  	  }
+	  	}
+	}
+
+
+/******************************
+****** HOME PAGE styles *******
+******************************/
+
+	#block-views-home_header_image-classic_1a {
+		margin: 0;
+		.flex-direction-nav {
+			.display-home-arrows();
+		}
+		.flex-control-nav {
+			.display-home-dots();
+			bottom: .5em;
+			.align-home-slider-flex-nav();
+			width: auto;
+		}
+		.flex-control-nav li a {
+			background: @home-caption-color - #222;
+			border-radius: 100px;
+		}
+		.flex-control-nav li a:hover {
+			background: @home-caption-color;
+		}
+		.flex-control-nav li a.active {
+			background: @color-light-gray;
+		}
+
+
+		h3 {
+			background: @home-caption-color;
+			color: @home-caption-font-color;
+			font-family: @home-caption-font;
+			font-size: @home-caption-font-size-mobile;
+			margin: 0;
+			padding: .5em @gutter-percent;
+		}
+	}
+	
+	.front {
+		#content-header, #content-area {
+			.display-home-page-content();
+		}
+	}
+	
+	#block-views-home_calendar_event-block_1 {
+		h2 {
+			margin-top: 0;
+		}
+		article {
+			clear: both;
+			i.date_grouping {
+				display: block;
+				float: left;
+				width: @date-grouping-width;
+				margin: 0 @date-grouping-margin-right 1em 0;
+				background: @date-grouping-background;
+				font-style: normal;
+				border: 1px solid @date-grouping-border-color;
+				b.date_day, i.date_mon-date {
+					display: block;
+					text-align: center;
+				}
+				b.date_day {
+					background-color: @date-day-background;
+					color: @date-day-color;
+					font-family: @date-day-font;
+					padding: 0.25em;
+				}
+				i.date_mon-date {
+					font-family: @date-month-font;
+					margin: .35em 0 .25em 0;
+				}
+			}
+			b.event_title {
+				display: block;
+				float: left;
+				width: @event-width;
+				margin-top: .25em;
+			}
+		}
+		.item-list .pager {
+			text-align: @home-events-align-pager;
+		}
+	}
+	
+	#block-views-home_page_callouts-block_1 {
+		width: 100%;
+		article {
+			margin-bottom: 1.25em;
+			position: relative;
+			i {
+				font-style: normal;
+			}
+		}
+		article:hover {
+			a h3 {
+				.colorize_bg(@callout-hover, @callout-hover-opacity);
+			}
+		}
+		a {
+			text-decoration: none;
+			h3 {
+				bottom: .15em;
+				color: @callout-font-color;
+				.colorize_bg(@callout-background, @callout-background-opacity);
+				font-size: @callout-h3-font-size;
+				margin: 0;
+				padding: .3em 2% .1em 2%;
+				position: absolute;
+				text-shadow: @callout-text-shadow;
+				text-transform: @callout-text-transform;
+				width: 96%;
+			}
+		}
+	}
+	
+	.date-display-single {
+		font-style: normal;
+		font-weight: 400;
+	}
+	
+	.event_title a {
+		font-weight: 400;
+		text-decoration: none;
+	}
+	
+	.event_title a:hover {
+		text-decoration: none;
+	}
+	
+	#block-views-home_news_display-block_1 {
+		article {
+			margin-bottom: 3em;
+			padding-top: 0;
+		}
+		h2 {
+			margin-top: 0;
+		}
+		h3.title {
+			font-size: @news-h3-font-size;
+			a {
+				text-decoration: none;
+			}
+		}
+		i.image {
+			float: left;
+			border: @news-image-border-size solid @news-image-border-color;
+			padding: .25em .25em 0 .25em;
+			margin: 0 1em .5em 0;
+			img {
+				max-width: 100px;
+				width: 100%;
+			}
+		}
+		.date {
+			display: block;
+			margin-bottom: .3em;
+		}
+		b.body {
+			font-family: @news-body-font;
+			font-weight: 400;
+		}
+		.view-footer {
+			text-align: @home-news-align-pager;
+		}
+	}
+
+
+/*********** Alert Box Anouncement ***********/
+
+#easyNotification {
+	
+		padding-right: 70px;
+	
+	span.close {
+		position: absolute;
+		top: 1em;
+		right: 1em;
+	}
+	h1 {
+		font-family: @font-stack-sans-bold;
+		text-transform: none;
+		font-size: 1.4em;
+		display: inline;
+		padding-right: 1em;
+	}
+	
+	p {
+		font-family: @font-stack-sans;	
+		color: #fff;
+	}
+	
+	.date-display-single {
+		font-family: @font-stack-sans-italic;
+	}
+
+	a {
+	color: #fff;
+	text-decoration: none;
+	
+		&:hover {
+			text-decoration: none;
+			color: @color-red + #fff;
+		}
+	}
+	
+	h1 {
+		padding-bottom: .5em;
+	}
+}
+
+
+.view-blog-display{
+  article{
+    margin-bottom: 1em;
+    h3.title{
+      font-size: 1em;
+    }
+  }
+}
+
+
+
+/********************************
+****** MEDIA QUERY styles *******
+********************************/
+
+
+@media screen and (min-width: 801px) {
+
+ 	#block-search-0 {
+	 	margin: .5em 1em;	// was .5 auto
+	 	width: 85%;
+	 	float:right;
+	 	display: inline;
+	 	clear: none;
+ 	}
+ 	// Amazon Link
+ 	#block-block-57 {
+ 		float: right;
+ 		display: inline;
+ 		background: transparent url('../images/amazon.png') center 7px no-repeat;
+ 		padding-top: 7px;
+ 		#amazon-link {
+ 			width: 34px;
+ 			height: 34px;
+ 		}
+ 		
+ 		&:hover {
+ 			background-image: url('../images/amazon-hover.png');
+ 		}
+ 	}	
+ 	
+ 	footer {
+	  	address {
+		  	.locality {
+			  	float: left;
+			  	margin-right: 0.75em;
+			  	padding-right: 0.75em;
+		  	}
+		  	.phone {
+			  	float: left;
+		  	}
+	  	}
+		#block-block-52 {	// Social Media
+			clear: right;
+			float: right;
+		}
+		#block-block-51 {	// Address and Contact
+			width: 60%;
+		}
+		#block-block-58 {	// Accredidation Logos
+			clear: right;
+			float: right;
+		}
+	}
+	
+	.btn-1, .btn-2 {
+		display: inline-block;
+/* 		margin-right: 50%; */
+		margin-bottom: 0;
+	}
+	
+	#block-views-home_header_image-classic_1a {
+		margin: 0;
+		ul.flex-direction-nav {
+			.display-home-arrows();
+		}
+		h3 {
+			bottom: 1em;
+			.colorize_bg(@home-caption-color, @home-caption-opacity);
+			font-size: @home-caption-font-size-desktop;
+			padding: .15em @gutter-percent;
+			position: absolute;
+			text-shadow: @home-caption-text-shadow;
+		}
+	}
+	
+	#block-views-home_calendar_event-block_1, #block-views-home_news_display-block_1, #block-block-55 {
+		float: left;
+		margin-right: @home-desktop-margin-width;
+		width: @home-events-and-news-desktop-width;
+	}
+	
+	#block-views-home_page_callouts-block_1 {
+		float: left;
+		width: @home-callouts-desktop-width;
+	}
+	
+	// Left Sidebar Callout
+	#block-block-56 {
+		.show(block);
+		
+		.btn-1, a.btn-1, .btn-2, a.btn-2 {
+			min-width: 0;
+		}
+	}
+
+}/*/mediaquery*/
+
+
+@media screen and (min-width: 900px) {
+
+	#header-inner {
+		padding: 0;
+	}
+	
+	#logo-title {
+		float: left;
+		margin-left: @gutter-percent;
+		width: 60%;
+		
+		#logo {
+			margin: 0;
+			float: left;
+		}
+		
+		#site-slogan {
+			float: left;
+			margin-top: 5em;
+		}
+	}
+	
+	#toolbar {
+		float: right;
+		margin-right: @gutter-percent;
+		margin-top: .25em;;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	
+	#block-search-0 {
+		width: @search-desktop-width;
+	}
+  
+  #toolbar .block-menu ul.menu, #toolbar .block-menu_block ul.menu {
+	  text-align: @toolbar-text-align-desktop;
+  }
+  
+  #toolbar .block-menu ul.menu li, #toolbar .block-menu_block ul.menu li {
+	  padding-right: 0;
+	  text-align: @toolbar-text-align-desktop;
+  }
+
+  
+
+}/*/mediaquery*/
+
+
+@media screen and (min-width: 1100px) {
+	#logo-title #site-slogan {
+		margin-top: 4em;	
+	}
+	
+}/*/mediaquery*/
+
+
+@media screen and (orientation:landscape) and (device-width:320px) and (device-height: 480px) {
+	body {
+		width: 480px;
+	}
+}
+
+#navbar {
+	ul li ul li {
+	/*display: none;*/
+	}
+  .topfirst {
+    display: none;
+  }
+}

@@ -1,0 +1,49 @@
+/*
+ * CORE CSS FOR SY GALLERIES FEATURE:
+ * sy_media_gallery
+ */
+
+/* LESS.css variables */
+@import "variables.less";
+
+
+/*********************************
+****** Node Gallery styles *******
+*********************************/
+	ul.gallery_grid 
+	{
+		margin: 0; 
+		padding: 0; 
+		list-style: none;
+		li 
+		{
+			list-style: none; 
+			margin: 1em 3% 0 0; 
+			padding: 0; 
+			float: left;
+			width: 22%; 
+			b.title 
+			{
+				font-weight: normal; 
+				font-size: 12em / @font-base-size;
+			}
+			i.image 
+			{
+				font-family: @font-stack-sans;
+				font-style: normal;
+				img 
+				{
+					width: 100%; 
+					max-width: 100%; 
+					height: auto;
+				}
+			}
+		} 
+		li.first 
+		{
+			clear: left;
+		}
+	}
+
+
+/**** /end NODE GALLERY Feature styles ****/

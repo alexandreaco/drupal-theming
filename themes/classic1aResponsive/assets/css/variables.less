@@ -1,0 +1,619 @@
+/* CLASSIC 1b */
+/* LESS.css variables */
+/* (get imported in each separate .less file) 
+CLASSIC 1A*/
+
+
+@page-width: 960px;
+@left-col-width: 220px;
+@right-col-width: 220px;
+@gutter: 30px;
+@page-width-max: 1200px;
+
+@font-base-size: 16em;
+
+
+
+/******************************** LAYOUT ********************************/
+
+
+
+@page-width-percent: 100%;
+@left-col-width-percent: 0% + ((@left-col-width / @page-width) * 100); 
+@right-col-width-percent: 0% + ((@right-col-width / @page-width) * 100);
+@gutter-percent: 0% + ((@gutter / @page-width) * 100);
+@gutter-content-sidebar-left-percent: 0% + ((@gutter / (@page-width - @left-col-width)) * 100);
+@gutter-content-sidebar-right-percent: 0% + ((@gutter / (@page-width - @right-col-width)) * 100);
+@gutter-left-percent: 0% + ((@gutter / @left-col-width) * 100);
+@gutter-right-percent: 0% + ((@gutter / @right-col-width) * 100);
+
+
+
+
+
+/******************************** COLORS ********************************/ 
+
+
+@color-dark-gray: #666666; 
+@color-gray: #CCC;
+@color-md-light-gray: #D7DAD4;
+@color-light-gray: #e5e5e5; 
+@color-red: #FF0000; 
+
+
+/* Branding Colors */
+
+@color-green: #00705a;
+@color-light-green: #68ad45;
+@color-orange: #FF8500;
+
+@background-color: #F8F8F8;
+@page-color: #FEFEFE;
+@page-border-color: @color-md-light-gray;
+
+
+
+/****************************** TYPOGRAPHY ******************************/
+
+
+@font-stack-serif-fallback: Rockwell, Georgia, "Times New Roman", "Bitstream Vera Serif", serif; 
+@font-stack-sans-fallback: Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+@font-stack-serif: 'Palatino LT W01 Light', @font-stack-serif-fallback;
+@font-stack-serif-italic: 'PalatinoLTW01-LightItal', @font-stack-serif-fallback;
+@font-stack-serif-bold: 'Palatino LT W01 Medium', @font-stack-serif-fallback;
+@font-stack-serif-bold-italic: 'PalatinoLTW01-MediumIta', @font-stack-serif-fallback;
+@font-stack-sans: 'Avenir LT W01 45 Book', @font-stack-sans-fallback;
+@font-stack-sans-italic: 'AvenirLTW01-45BookObliq', @font-stack-sans-fallback;
+@font-stack-sans-bold: 'Avenir LT W01 85 Heavy', @font-stack-sans-fallback;
+@font-stack-sans-bold-italic: 'AvenirLTW01-85HeavyObli', @font-stack-sans-fallback;
+@font-stack-script: @font-stack-serif, @font-stack-sans-fallback;
+
+@body-font: @font-stack-sans;
+
+strong, 
+b {
+	font-family: @font-stack-sans; 
+	font-weight: 700;
+}
+
+em, 
+i {
+	font-family: @font-stack-sans;
+	font-style: italic; 
+}
+
+strong em, 
+em strong, 
+b i, 
+i b {
+	font-family: @font-stack-sans-bold-italic;
+	font-style: italic; 
+	font-weight: 700;
+}
+
+body#tinymce, 
+body.forceColors #iframe, 
+body #tinymce, 
+body.mceContentBody { 
+	em, i {
+  	font-style: italic;
+	}
+	b, strong {
+  	font-weight: bold;
+	}
+}
+
+@font-stack-h1: @font-stack-serif;
+@font-stack-h2: @font-stack-serif;
+@font-stack-h3: @font-stack-sans;
+@font-stack-h4: @font-stack-sans;
+@font-stack-h5: @font-stack-sans;
+@font-stack-h6: @font-stack-sans;
+
+@color-h1: @color-orange;
+@color-h2: @color-green;
+@color-h3: @color-light-green;
+@color-h4: @color-gray;
+@color-h5: @color-gray;
+@color-h6: @color-gray;
+
+
+
+/*************************** HTML BASE STYLES ****************************/
+
+
+@page-font-size: @font-base-size / 16em;
+@page-line-height: 20em / @font-base-size;
+@text-color: @color-dark-gray;
+
+
+@h1-font-weight: normal;															/* H1*/
+@h1-font-size: 28em / @font-base-size;
+
+@h2-font-weight: normal;															/* H2*/
+@h2-font-size: 24em / @font-base-size;
+
+@h3-font-weight: bold;																/* H3*/
+@h3-font-size: 22em / @font-base-size;
+
+@h4-font-weight: normal;															/* H4*/
+@h4-font-size: 20em / @font-base-size;
+
+@h5-font-weight: normal;															/* H5*/
+@h5-font-size: 18em / @font-base-size;
+
+@h6-font-weight: normal;															/* H6*/
+@h6-font-size: 16em / @font-base-size;
+
+
+@blockquote-font: @font-stack-serif-italic;						/* Blockquote */
+@blockquote-font-size: 18em / @font-base-size;
+@blockquote-color: @color-orange;
+@blockquote-border-color: @color-orange;
+@blockquote-border-size: 10px;
+
+
+@a-link: @color-green;																/* Links */
+@a-visited: @a-link - #222;
+@a-hover: @a-link - #444;
+@a-active: @a-link - #444;
+@a-focus: @a-link - #444;
+
+
+
+/*************************** FORM BASE STYLES ****************************/
+
+
+@form-input-font: @font-stack-sans;
+@form-input-border-color: @color-gray;
+@form-input-background: #fff;
+
+@form-submit-font: @font-stack-sans;
+@form-submit-font-size: 13 / @font-base-size;
+@form-submit-color: #fff;
+@form-submit-background: @color-light-green;
+@form-submit-background-hover: @color-green;
+
+
+
+/******************************** BUTTONS ********************************/
+
+
+@button-color: @color-green;
+@button-a-hover-color: #fff;
+@button-font: @font-stack-sans;
+@button-font-size: 1.1em;
+@button-border-size: 2px;
+@button-min-width: 175px;
+@button-transition-duration-in: 300ms;
+@button-transition-duration-out: 500ms;
+
+
+
+/******************************** HEADER ********************************/
+
+
+@header-color: @page-color;
+@header-mobile-color: #fff;
+
+
+
+/******************************** TOOLBAR ********************************/
+
+
+@toolbar-text-align-mobile: center;
+@toolbar-text-align-desktop: right;
+@toolbar-font-size: 12em / @font-base-size;
+@toolbar-font-weight: 700;
+@toolbar-a-link: @color-dark-gray;
+@toolbar-a-hover: @color-dark-gray - #222;
+@toolbar-color: @color-dark-gray;
+@toolbar-border-color: transparent;
+@toolbar-background: transparent;
+@toolbar-hover: @color-gray;
+
+
+
+/******************************** NAVBAR ********************************/
+
+
+@navbar-font: @font-stack-sans;
+@navbar-text-align: center;
+@navbar-font-size: 16em / @font-base-size;
+
+@navbar-a-link: #fff;		
+@navbar-a-visited: #fff;							// color
+@navbar-color: @color-green;					// background-color
+
+@navbar-a-hover: #fff;
+@navbar-a-active: #fff;
+@navbar-a-focus: #fff;								// color
+@navbar-hover: @color-light-green;		// background-color
+
+@navbar-sub-a: #fff;									// color
+@navbar-sub: @color-light-green;			// background-color
+@navbar-sub-width: 18em;
+
+@navbar-sub-a-hover: #fff;						// color
+@navbar-sub-hover: @color-green;			// background-color
+
+
+
+/***************************** MOBILE MENU ******************************/
+
+
+@mobile-menu-color: @navbar-color;
+@mobile-menu-icon: #fff;
+@mobile-menu-a-link: #fff;
+@mobile-menu-border: @color-light-gray;
+
+
+
+/****************************** SEARCH **********************************/
+
+
+@search-color: @color-light-gray;
+@search-border-radius: 0;
+@search-desktop-width: 20em;
+
+
+/**************************** SIDEBAR-LEFT ******************************/
+
+
+@left-nav-accent-color: @color-light-green;
+@left-nav-hover: @color-orange;
+@left-nav-a: @color-light-green;
+@left-nav-a-hover: @color-light-gray;
+@left-nav-a-active: @color-orange;
+
+
+
+/**************************** SIDEBAR-RIGHT *****************************/
+
+
+@sidebar-right-h2-size: 18em / @font-base-size;
+@sidebar-right-h3-size: 16em / @font-base-size;
+@sidebar-right-text-size: 14em / @font-base-size;
+
+
+
+/****************************** FLEX SLIDER *******************************/
+
+
+@home-caption-color: @color-light-green;
+@home-caption-opacity: .7;
+@home-caption-font-color: #fff;
+@home-caption-font: @font-stack-serif;
+@home-caption-font-size-mobile: 20em / @font-base-size;
+@home-caption-font-size-desktop: 38em / @font-base-size;
+@home-caption-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+
+	.align-home-slider-flex-nav() {
+		.align-right();
+	}
+	.display-home-arrows() {
+		.hide();
+	}
+	.display-home-dots() {
+		.show(inline-block);
+	}
+
+@page-caption-color: @color-light-green;
+	
+	.align-page-slider-flex-nav() {
+		.align-right();
+	}
+	.display-page-arrows() {
+		.hide();
+	}
+	.display-page-dots() {
+		.show(inline-block);
+	}
+
+
+
+/******************************** FOOTER ********************************/
+
+
+@footer-color: @color-light-gray;
+@footer-border-color: @color-light-gray;
+@footer-border-size: 5px;
+@footer-text: @color-dark-gray;
+@footer-font-size: 14em / @font-base-size;
+@footer-a-link: @color-light-green;
+@footer-a-hover: @color-green;
+@footer-h4-color: @color-green;
+@footer-h3-color: @color-green;
+@footer-h3-font: @font-stack-sans;
+@footer-h3-font-size: 1.5em;
+
+@closure-text: @color-gray;
+@closure-font-size: .75em;
+@closure-a-link: @color-gray;
+@closure-a-hover: @color-dark-gray;
+@closure-color: @color-light-gray;
+
+@social-circle-font-size: 32em / @font-base-size;
+@social-circle-a-link: @color-light-green;
+@social-circle-a-hover: @color-green;
+
+
+
+/******************************* HOMEPAGE *******************************/
+
+.display-home-page-content() {		// Toggle h1 and page content on <front>
+	.show(block);
+}
+
+@home-feature-default-font: @font-stack-sans;
+@home-align-more-link: right;
+
+
+@date-grouping-width: 28%;															/* Events Feed */
+@date-grouping-margin-right: 5%;
+@date-grouping-background: #FAFAFA;
+@date-day-background: @color-green;
+@date-grouping-border-color: @color-light-gray;
+@date-day-color: #fff;
+@date-day-font: @font-stack-sans-bold;
+@date-month-font: @font-stack-sans;
+@event-width: 66%;
+@home-events-align-pager: right;
+
+
+@callout-font-color: #fff;																/* Callouts */
+@callout-background: @color-light-green;
+@callout-background-opacity: .85;
+@callout-border-size: 4px;
+@callout-border-color: #fff;
+@callout-h3-font-size: 20em / @font-base-size;
+@callout-hover: @color-green;
+@callout-hover-opacity: .85;
+@callout-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+@callout-text-transform: uppercase;
+
+
+@news-h3-font-size: 18em / @font-base-size;								/* News Feed */
+@news-image-border-size: 1px;
+@news-image-border-color: @color-light-gray;
+@news-body-font: @font-stack-sans;
+@home-news-align-pager: right;
+
+
+@home-events-and-news-desktop-width: 32%;									/* Desktop View */
+@home-callouts-desktop-width: 32%;
+@home-desktop-margin-width: 2%;
+
+
+
+/********************************* AUX **********************************/
+
+
+/* ALERT variables */
+@alert-color: @color-red;
+@alert-text: #fff;
+
+/* BLOG Feature variables */
+@blog-title-h3-font: @font-stack-sans;
+@blog-title-h3-size: 20em / @font-base-size;
+@blog-date-font: @font-stack-sans-italic;
+@blog-date-size: 12em / @font-base-size;
+@blog-byline-font: @font-stack-sans-italic;
+@blog-byline-size: 16em / @font-base-size;
+@blog-body-font: @font-stack-sans;
+@blog-body-size: 16em / @font-base-size;
+@blog-more-font: @font-stack-sans-italic;
+@blog-more-size: 16em / @font-base-size;
+
+/* CURRICULUM variables */
+@curriculum-a-link: @color-light-green;
+@curriculum-a-hover: @color-green;
+
+
+/* CALENDAR variables */
+@calendar-dark: @color-green;
+@calendar-medium: @color-light-green;
+@calendar-light: @color-light-gray + #222;
+@calendar-light-neutral: @color-light-gray;
+@calendar-day-row: @color-green;
+@calendar-list-date: @color-green;
+@calendar-list-border: @color-light-green;
+@calendar-list-title: @color-light-green;
+
+
+
+/* FAQ variables */
+@faq-color-odd: @color-light-gray;
+@faq-border-odd: @color-light-gray - #222;
+@faq-color-even: @color-light-gray + #111;
+@faq-border-even: @color-light-gray - #111;
+
+
+
+/* DIRECTORY Feature variables */
+
+@directory-name: @color-green;
+@directory-read-more: @color-green;
+
+
+
+
+/* GROUPS Feature variables */
+@group-hdr-h2: @color-dark-gray;
+@group-hdr-h2-a: @color-dark-gray; 
+@group-hdr-h2-size: 20em / @font-base-size;
+
+@group-menu-a-color: @color-gray; 
+@group-menu-a-hover: #fff; 
+@group-menu-a-hover-background: @color-dark-gray;
+@group-menu-size: 16em / @font-base-size; 
+@group-menu-border: solid 1px @color-light-gray;
+
+
+
+
+/* IMAGE variables */
+@image-caption-font-size: .75em;
+@image-caption-font-color: @color-gray;
+
+
+
+/* NEWS Feature variables */
+@news-title-h3-font: @font-stack-sans;
+@news-title-h3-size: 20em / @font-base-size;
+@news-date-font: @font-stack-sans-italic;
+@news-date-size: 12em / @font-base-size;
+@news-byline-font: @font-stack-sans-italic;
+@news-byline-size: 16em / @font-base-size;
+@news-body-font: @font-stack-sans;
+@news-body-size: 16em / @font-base-size;
+@news-more-font: @font-stack-sans-italic;
+@news-more-size: 16em / @font-base-size;
+
+
+
+/* NEWSLETTER variables */
+@newsltr-color-header: @navbar-color;
+@newsltr-color-header-text: #fff;
+@newsltr-color-footer: @navbar-color;
+@newsltr-color-footer-text: #fff; 
+
+@newsltr-std-text: @font-stack-sans;
+@newsltr-hdr-txt: @font-stack-serif-bold;
+
+@newsltr-sidebar-hdr-color: @color-gray; 
+@newsltr-sidebar-hdr-color-text: #fff;
+@newsltr-sidebar-hdr-color-text-size: .86em;
+
+
+
+/* NEWSLETTER mail variables */
+@newsltr-width: 700px;
+@newsltr-width-main: 65%;
+@newsltr-width-sidebar: 35%;
+@newsltr-color-sidebar: @color-light-gray;
+
+@newsltr-mail-std-text: Helvetica, Arial, sans-serif;
+@newsltr-mail-hdr-text: Rockwell, Georgia, serif; 
+@newsltr-mail-hdr-text-wt: bold;
+@newsltr-mail-mast-text-size: 1.25em;
+
+
+
+
+
+/****************************** FUNCTIONS *******************************/
+
+
+.border-radius(@radius-tl:10px, @radius-tr:10px, @radius-br:10px, @radius-bl:10px) {
+	-webkit-border-top-left-radius: @radius-tl;
+	-moz-border-radius-topleft: @radius-tl;
+	-o-border-top-left-radius: @radius-tl;
+	border-top-left-radius: @radius-tl;
+	-webkit-border-top-right-radius: @radius-tr;
+	-moz-border-radius-topright: @radius-tr;
+	-o-border-top-right-radius: @radius-tr;
+	border-top-right-radius: @radius-tr;
+	-webkit-border-bottom-right-radius: @radius-br;
+	-moz-border-radius-bottomright: @radius-br;
+	-o-border-bottom-right-radius: @radius-br;
+	border-bottom-right-radius: @radius-br;
+	-webkit-border-bottom-left-radius: @radius-bl;
+	-moz-border-radius-bottomleft: @radius-bl;
+	-o-border-bottom-left-radius: @radius-bl;
+	border-bottom-left-radius: @radius-bl;
+	border-radius: @radius-tl @radius-tr @radius-br @radius-bl;
+}
+
+.opacity(@op:100) {
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=@op)';
+  filter:'alpha(opacity=@op)';
+  -moz-opacity: @op/100;
+  -khtml-opacity: @op/100;
+  opacity: @op/100 !important;
+}
+
+.box-shadow(@right: 4px, @down: 4px, @blur: 10px, @rgba-r: 0, @rgba-g: 0, @rgba-b: 0, @alpha: 0.35) {
+	-webkit-box-shadow: @right @down @blur rgba(@rgba-r, @rgba-g, @rgba-b, @alpha); 
+	-moz-box-shadow: @right @down @blur rgba(@rgba-r, @rgba-g, @rgba-b, @alpha);
+	box-shadow: @right @down @blur rgba(@rgba-r, @rgba-g, @rgba-b, @alpha);
+}
+
+.inner-shadow(@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.transition(@property: background) {
+	-webkit-transition: @property 0.3s ease-in-out; 
+	-moz-transition: @property 0.3s ease-in-out; 
+	-o-transition: @property 0.3s ease-in-out; 
+	transition: @property 0.3s ease-in-out;
+}
+
+.colorize_bg(@color: @white, @alpha: 1) {
+  background: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+}
+
+.gradient (@origin: left, @start: #ffffff, @stop: #000000) {
+	background-color: @start;
+	background-image: -webkit-linear-gradient(@origin, @start, @stop);
+	background-image: -moz-linear-gradient(@origin, @start, @stop);
+	background-image: -o-linear-gradient(@origin, @start, @stop);
+	background-image: -ms-linear-gradient(@origin, @start, @stop);
+	background-image: linear-gradient(@origin, @start, @stop);
+}
+
+.align-left() {
+	left: @gutter-percent;
+	right: auto;
+}
+
+.align-right() {
+	right: @gutter-percent;
+	left: auto;
+}
+
+.hide() {
+	display: none;
+	visibility: hidden;
+}
+
+.show(@display) {
+	display: @display;
+	visibility: visible;
+}
+
+.no_select_highlight {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+
+/* DEPRECIATED */
+
+/* @navbar-text: #fff; */
+/* @navbar-active: @color-light-green; */
+/* @navbar-height: auto; */
+
+/* @submit-button-top: @color-blue; */
+/* @submit-button-bottom: @color-dark-blue; */
+/* @submit-button-hover-top: @color-dark-blue; */
+/* @submit-button-hover-bottom: @color-blue; */
+
+/* @callout-color: @color-red; */
+/* @callout-link: @color-red; */
+/* @callout-gradient: @color-red; */
+
+/* @submit-button: @color-light-green; */
+/* @submit-button-hover: @color-green; */
+
+/* @directory-button-show-all: @color-green; */
+/* @directory-button-show-all-hover: @color-light-green; */
+/* @directory-button-show-all-text: #fff; */
+/* @directory-button-show-all-text-hover: #fff; */
+

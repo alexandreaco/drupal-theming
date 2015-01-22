@@ -1,0 +1,156 @@
+/*
+ * CORE CSS FOR SY HOMEPAGE FEATURES:
+ * sy_homepage
+ */
+
+/* LESS.css variables */
+@import "variables.less";
+
+
+/******************************
+****** HOME PAGE styles *******
+******************************/
+
+	.front {
+		
+		#navbar {
+			margin-bottom: 0;
+		}
+		
+		#block-views-home_header_image-block_1 {
+			.flex-control-nav {
+				.display-home-arrows();
+			}
+		}
+		
+	}
+	
+	
+	.front {
+		#navbar {
+		margin-bottom: 0;
+		}
+		#content {
+			width: 100%;
+			#content-inner {
+				//padding: 0;
+				#content-area {
+					margin-bottom: 2em;
+					//padding: 0 @gutter-percent;
+				}
+				#content-bottom {
+					//padding: 0 @gutter-percent;
+					section.block {
+						width: 100%;
+						display: block;
+						h2 {
+							margin-top: 0;
+						}
+						.view-content {
+							article {
+								display: block;
+								clear: both;
+								margin-bottom: 1.5em;
+								padding: 0;
+							}
+							i, b {
+								font-family: @home-feature-default-font;
+								font-weight: normal;
+								font-style: normal;
+							}
+						}
+						.view-footer {
+							.more_link {
+								clear: both;
+								float: @home-align-more-link;
+							}
+						}
+					}
+					#block-views-home_calendar_event-block_1 {
+						.view-content {
+							article {
+								i.date_grouping {
+									display: block;
+									float: left;
+									width: @date-grouping-width;
+									margin: 0 @date-grouping-margin-right 1em 0;
+									.box-shadow(1px, 1px, 2px);
+									b.date_day, i.date_mon-date {
+										display: block;
+										text-align: center;
+									}
+									b.date_day {
+										background-color: @date-day-background;
+										color: @date-day-color;
+									}
+									i.date_mon-date {
+										margin: .35em 0 .25em 0;
+									}
+								}
+								b.event_title {
+									display: block;
+									float: left;
+									width: @event-width;
+									margin-top: .75em;
+								}
+							}
+						}
+					}
+
+					#block-views-home_page_callouts-block_1 {
+						.view-content {
+							article {
+								i.callout {
+									a {
+										padding:0 0 1em 0;
+/* 										.gradient(top, @callout-gradient + #222, @callout-gradient); */
+										.colorize_bg(@callout-background, @callout-background-opacity);
+										border: @callout-border-size solid @callout-border-color;
+										.box-shadow(1px, 1px, 1px);
+										display: block;
+										text-align: center;
+										text-decoration: none;
+										color: @callout-font-color;
+										font-size: 1.2em;
+										width: 100%;
+									}
+									a:hover {
+										.box-shadow(2px, 2px, 3px);
+									}
+								}
+							}
+						}
+					}
+
+				}
+			}
+		}
+	}
+	
+	
+	
+@media screen and (min-width: 801px) {	
+	
+	
+	.front {
+
+		#content {
+			#content-inner {
+				#content-bottom {
+					padding: 0 @gutter-percent;
+					section.block {
+						width: @home-events-and-news-desktop-width;
+						margin-right: @home-desktop-margin-width;
+						display: block;
+						float: left;
+					}
+					#block-views-home_page_callouts-block_1 {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+		
+	}
+	
+}

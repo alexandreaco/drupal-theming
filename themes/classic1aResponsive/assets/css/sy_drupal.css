@@ -1,0 +1,364 @@
+/*
+ * CORE CSS FOR CORE DRUPAL ELEMENTS:
+ * sy_drupal
+ */
+/* LESS.css variables */
+/* CLASSIC 1b */
+/* LESS.css variables */
+/* (get imported in each separate .less file) 
+CLASSIC 1A*/
+/******************************** LAYOUT ********************************/
+/******************************** COLORS ********************************//* Branding Colors */
+/****************************** TYPOGRAPHY ******************************/
+strong,
+b {
+  font-family: 'Avenir LT W01 45 Book', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-weight: 700;
+}
+em,
+i {
+  font-family: 'Avenir LT W01 45 Book', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-style: italic;
+}
+strong em,
+em strong,
+b i,
+i b {
+  font-family: 'AvenirLTW01-85HeavyObli', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+body#tinymce em,
+body.forceColors #iframe em,
+body #tinymce em,
+body.mceContentBody em,
+body#tinymce i,
+body.forceColors #iframe i,
+body #tinymce i,
+body.mceContentBody i {
+  font-style: italic;
+}
+body#tinymce b,
+body.forceColors #iframe b,
+body #tinymce b,
+body.mceContentBody b,
+body#tinymce strong,
+body.forceColors #iframe strong,
+body #tinymce strong,
+body.mceContentBody strong {
+  font-weight: bold;
+}
+/*************************** HTML BASE STYLES ****************************/
+/* H1*/
+/* H2*/
+/* H3*/
+/* H4*/
+/* H5*/
+/* H6*/
+/* Blockquote */
+/* Links */
+/*************************** FORM BASE STYLES ****************************/
+/******************************** BUTTONS ********************************/
+/******************************** HEADER ********************************/
+/******************************** TOOLBAR ********************************/
+/******************************** NAVBAR ********************************/
+/***************************** MOBILE MENU ******************************/
+/****************************** SEARCH **********************************/
+/**************************** SIDEBAR-LEFT ******************************/
+/**************************** SIDEBAR-RIGHT *****************************/
+/****************************** FLEX SLIDER *******************************/
+/******************************** FOOTER ********************************/
+/******************************* HOMEPAGE *******************************/
+/* Events Feed */
+/* Callouts */
+/* News Feed */
+/* Desktop View */
+/********************************* AUX **********************************/
+/* ALERT variables */
+/* BLOG Feature variables */
+/* CURRICULUM variables */
+/* CALENDAR variables */
+/* FAQ variables */
+/* DIRECTORY Feature variables */
+/* GROUPS Feature variables */
+/* IMAGE variables */
+/* NEWS Feature variables */
+/* NEWSLETTER variables */
+/* NEWSLETTER mail variables */
+/****************************** FUNCTIONS *******************************/
+.no_select_highlight {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+/* DEPRECIATED */
+/* @navbar-text: #fff; */
+/* @navbar-active: @color-light-green; */
+/* @navbar-height: auto; */
+/* @submit-button-top: @color-blue; */
+/* @submit-button-bottom: @color-dark-blue; */
+/* @submit-button-hover-top: @color-dark-blue; */
+/* @submit-button-hover-bottom: @color-blue; */
+/* @callout-color: @color-red; */
+/* @callout-link: @color-red; */
+/* @callout-gradient: @color-red; */
+/* @submit-button: @color-light-green; */
+/* @submit-button-hover: @color-green; */
+/* @directory-button-show-all: @color-green; */
+/* @directory-button-show-all-hover: @color-light-green; */
+/* @directory-button-show-all-text: #fff; */
+/* @directory-button-show-all-text-hover: #fff; */
+/***********************************
+******* DRUPAL NODES styles ********
+***********************************/
+body#tinymce,
+body.forceColors #iframe,
+body #tinymce,
+body.mceContentBody {
+  background-color: #fff !important;
+  background-image: none;
+  border: none;
+  color: #666666;
+}
+.node-unpublished div.unpublished,
+.comment-unpublished div.unpublished {
+  height: 0;
+  overflow: visible;
+  color: #d8d8d8;
+  font-size: 75px;
+  line-height: 1;
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word;
+  /* A very nice CSS3 property */
+
+}
+.marker {
+  color: #c00;
+}
+.node.node-unpublished .picture,
+.comment.comment-unpublished .picture {
+  position: relative;
+  /* Otherwise floated pictures will appear below the "Unpublished" text. */
+
+}
+/** Drupal comments **/
+#comments {
+  margin: 1em 0;
+}
+.new {
+  color: #c00;
+}
+.comment ul.links {
+  margin: 1em 0;
+}
+/** Drupal blocks **/
+.block {
+  margin-bottom: 1em;
+}
+.more-link {
+  text-align: right;
+}
+#user-login-form {
+  text-align: left;
+}
+li a.active {
+  color: #000;
+}
+/** Drupal forms **/
+.form-item,
+.form-checkboxes,
+.form-radios {
+  margin: 1em 0;
+}
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  border: 2px solid #c00;
+}
+.form-item label {
+  display: block;
+  font-weight: bold;
+}
+.form-item label.option {
+  display: inline;
+  font-weight: normal;
+}
+.form-required {
+  color: #c00;
+}
+.form-item .description {
+  font-size: 0.85em;
+}
+.form-checkboxes .form-item,
+.form-radios .form-item {
+  margin: 0.4em 0;
+}
+.container-inline div,
+.container-inline label {
+  display: inline;
+}
+.tips {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9em;
+}
+#views-ajax-pad .form-buttons .form-submit {
+  padding: .5em;
+}
+/** OpenID **/
+/* The default styling for the OpenID login link seems to assume Garland's
+   * styling of list items.
+   */
+#user-login-form ul {
+  margin-bottom: 0;
+  /* Position OpenID's ul next to the rest of the links. */
+
+}
+#user-login-form li.openid-link {
+  margin-top: 1em;
+  margin-left: -20px;
+  /* Un-do some of the padding on the ul list. */
+
+}
+#user-login-form li.user-link {
+  margin-top: 1em;
+}
+#user-login ul {
+  margin: 1em 0;
+}
+#user-login li.openid-link,
+#user-login li.user-link {
+  margin-left: -2em;
+  /* Un-do all of the padding on the ul list. */
+
+}
+/** Drupal admin tables **/
+/* We overrode these styles in html-elements.css, but restore them for the
+   * forms on the site.
+   */
+form tbody {
+  border-top: 1px solid #ccc;
+}
+form th {
+  text-align: left;
+  padding-right: 1em;
+  border-bottom: 3px solid #ccc;
+}
+form tbody th {
+  border-bottom: 1px solid #ccc;
+}
+form thead th {
+  text-align: left;
+  padding-right: 1em;
+  border-bottom: 3px solid #ccc;
+}
+/*****************
+***** helper *****
+*****************/
+div.clear {
+  font-size: x-small;
+  height: 1px;
+  margin-top: -1px;
+  clear: both;
+}
+.views-admin-links {
+  width: 20em;
+  margin-top: -20px !important;
+}
+.views-admin-links ul {
+  margin: 0;
+}
+div.block.with-block-editing div.edit,
+div.edit {
+  font-size: 9px;
+  top: -10px;
+  line-height: 10px;
+}
+div.block.with-block-editing div.edit a:link,
+div.edit a:link,
+div.block.with-block-editing div.edit a:visited,
+div.edit a:visited {
+  color: #cccccc;
+  padding: 0;
+}
+.views-edit-view .defaulted {
+  font-family: 'AvenirLTW01-45BookObliq', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+}
+#ui-datepicker-div {
+  background-color: #fefefe;
+}
+/**
+ * shiny upload CSS
+ */
+.file-uploads .file-file {
+  margin: 10px 20px;
+}
+.file-file img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.file-file .file-link {
+  font-weight: bold;
+}
+.file-file .file-metadata {
+  margin-left: 46px;
+  font-size: .8em;
+}
+.file-file .file-metadata .file-size {
+  font-weight: bold;
+}
+.icon-certificate {
+  color: #ff0000;
+}
+/** end helper classes **/
+/******************************* CONTENT ********************************/
+.breadcrumb {
+  padding-bottom: 0;
+  /* Undo system.css */
+
+}
+h1.title,
+h2.title,
+h3.title {
+  margin: 0;
+}
+.help {
+  margin: 1em 0;
+}
+.more-help-link {
+  font-size: 0.85em;
+  text-align: right;
+}
+ul.links {
+  margin: 1em 0;
+  padding: 0;
+}
+ul.links.inline {
+  margin: 0;
+  display: inline;
+}
+ul.links li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 0.5em;
+}
+.pager {
+  clear: both;
+  margin: 1em 0;
+  text-align: center;
+}
+.pager a,
+.pager strong.pager-current {
+  padding: 0.5em;
+}
+.feed-icons {
+  clear: both;
+  float: right;
+  margin: 1em 0;
+}
+/**** /end CORE DRUPAL elements styles ****/

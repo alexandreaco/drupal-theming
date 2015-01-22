@@ -1,0 +1,59 @@
+/* LESS.css variables */
+@import "variables.less";
+
+/*
+ * IE CSS
+ *
+ * CSS targeted specifically for Internet Explorer for Windows.
+ *
+ * While building your theme, you should be aware that IE limits Drupal to 31
+ * stylesheets total. The work-around for the bug is to enable CSS aggregation
+ * under: admin / settings / performance.
+ *
+ * Properties starting with an underscore _ are for IE 5 and 6 only.
+ * Properties starting with head:first-child+body are for IE7 only.
+ * Properties with a child selector (>) or sibling selector (+) are for IE7 only.
+ *
+ *
+ */
+
+  #navbar ul.nice-menu-down li ul {
+  	background-color: @navbar-sub;
+  }
+  
+  #toolbar .block-menu ul.menu li {
+	  float: left;  
+	}
+
+  header, 
+  footer {
+  	display: block;
+  }
+  
+  #logo-title {
+  	display: block; 
+  	width: 50%;
+  }
+
+  #logo {
+  	float: left; 
+  	//position: relative;
+  }
+
+  #logo-image {
+  	float: none; 
+  	display: block;
+  	max-width: 65px;
+  	max-height: 71px;
+  	//width: 100%;
+  }
+  
+  img {
+  	height: auto !important; 
+  	width: auto\9; /* IE 8 */
+  }
+  
+  footer ul li {
+  	float: left;
+  	list-style-image: none;
+  }

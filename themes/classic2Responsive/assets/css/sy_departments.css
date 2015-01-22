@@ -1,0 +1,128 @@
+/*
+ * CORE CSS FOR SY DEPARTMENTS FEATURE:
+ * sy_media_gallery
+ */
+/* LESS.css variables */
+/* CLASSIC 1b */
+/* LESS.css variables */
+/* (get imported in each separate .less file) 
+
+CLASSIC 2*/
+/******************************** LAYOUT ********************************/
+/******************************** COLORS ********************************/
+/* Branding Colors */
+/****************************** TYPOGRAPHY ******************************/
+strong,
+b {
+  font-family: 'Avenir LT W01 45 Book', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-weight: 700;
+}
+em,
+i {
+  font-family: 'Avenir LT W01 45 Book', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-style: italic;
+}
+strong em,
+em strong,
+b i,
+i b {
+  font-family: 'AvenirLTW01-85HeavyObli', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+body#tinymce em,
+body.forceColors #iframe em,
+body #tinymce em,
+body.mceContentBody em,
+body#tinymce i,
+body.forceColors #iframe i,
+body #tinymce i,
+body.mceContentBody i {
+  font-style: italic;
+}
+body#tinymce b,
+body.forceColors #iframe b,
+body #tinymce b,
+body.mceContentBody b,
+body#tinymce strong,
+body.forceColors #iframe strong,
+body #tinymce strong,
+body.mceContentBody strong {
+  font-weight: bold;
+}
+/*************************** HTML BASE STYLES ****************************/
+/* H1*/
+/* H2*/
+/* H3*/
+/* H4*/
+/* H5*/
+/* H6*/
+/* Blockquote */
+/* Links */
+/*************************** FORM BASE STYLES ****************************/
+/******************************** BUTTONS ********************************/
+/******************************** HEADER ********************************/
+/******************************** TOOLBAR ********************************/
+/******************************** NAVBAR ********************************/
+/***************************** MOBILE MENU ******************************/
+/****************************** SEARCH **********************************/
+/**************************** SIDEBAR-LEFT ******************************/
+/**************************** SIDEBAR-RIGHT *****************************/
+/****************************** FLEX SLIDER *******************************/
+/******************************** FOOTER ********************************/
+/******************************* HOMEPAGE *******************************/
+/* Events Feed */
+/* Callouts */
+/* News Feed */
+/* Desktop View */
+/********************************* AUX **********************************/
+/* ALERT variables */
+/* CALLOUT button */
+/* BLOG Feature variables */
+/* BUTTON colors */
+/* CALENDAR variables */
+/* FAQ variables */
+/* DIRECTORY Feature variables */
+/* GROUPS Feature variables */
+/* HOMEPAGE variables */
+/* NEWS Feature variables */
+/* NEWSLETTER variables */
+/* NEWSLETTER mail variables */
+/****************************** FUNCTIONS *******************************/
+.no_select_highlight {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+/*********************************
+****** DEPARTMENT styles *******
+*********************************/
+.view-Departments .view-footer {
+  float: right;
+}
+.node-type-department .view-directory-by-department .view-content article .global_image {
+  width: 100%;
+  float: none;
+  clear: both;
+  margin: 0 0 .5em 0;
+}
+.node-type-department .view-directory-by-department .view-content article .directory_name h3 {
+  display: inline;
+}
+.node-type-department .view-directory-by-department .view-content article .directory_name h3 a {
+  font-size: 1.125em;
+}
+.node-type-department .view-directory-by-department .view-content article .directory_name h3 em {
+  display: none;
+}
+.node-type-department .view-directory-by-department .view-content article .directory_name a {
+  font-size: .85em;
+}
+.node-type-department .view-directory-by-department .view-content article .directory_title {
+  font-family: 'Avenir LT W01 85 Heavy', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-weight: bold;
+  margin-bottom: .5em;
+}
+/**** /end DEPARTMENT Feature styles ****/

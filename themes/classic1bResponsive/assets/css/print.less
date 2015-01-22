@@ -1,0 +1,126 @@
+/* LESS.css variables */
+@import "variables.less";
+
+
+
+/* underline all links */
+  a:link, a:visited
+  {
+    text-decoration: underline !important;
+  }
+
+  /* Don't underline header */
+  #site-name a:link,
+  #site-name a:visited
+  {
+    text-decoration: none !important;
+  }
+
+/* CSS2 selector to add visible href after links */
+  #content a:link:after,
+  #content a:visited:after
+  {
+    //content: " (" attr(href) ") ";
+    font-size: 0.8em;
+    font-weight: normal;
+  }
+
+/* Un-float the content */
+  #content,
+  #content-inner
+  {
+    float: none;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+/* Turn off any background colors or images */
+  body,
+  #page, #page-inner,
+  #main, #main-inner,
+  #content, #content-inner
+  {
+    color: #000;
+    background-color: transparent !important;
+    background-image: none !important; 
+    .box-shadow(0, 0, 0px, 255, 255, 255, 100); 
+  }
+
+/* Hide sidebars and nav elements */
+  #skip-to-nav, #navbar, #sidebar-left, #sidebar-right, footer,
+  .breadcrumb, div.tabs, .links, .taxonomy,
+  .book-navigation, .forum-topic-navigation, .pager, .feed-icons, 
+  #header-blocks
+  {
+    visibility: hidden;
+    display: none;
+  }
+
+/* Otherwise, Firefox clips the content after the first page. */
+  #page
+  {
+    overflow-y: visible;
+  }
+
+/* calendar-specific */ 
+  .section-calendar #logo img {
+  	//height: 94px; 
+  	width: 100px;
+  }
+  
+  .section-calendar a:link:after,
+  .section-calendar a:visited:after
+  {
+    content: "" !important;
+    display: none;
+  }
+
+  #block-views-Calendar_Nav_Menu-block_1 {
+  	display: none;
+  }
+  .section-calendar h1.title {
+  	display: none;
+  } 
+  
+  .section-calendar .date-nav {
+  	float: left; 
+  	margin: -80px 0px 0px 125px;
+  }
+  
+  .calendar-calendar tr td {
+  	background-color: transparent !important; 
+  	font-size: .76em;
+  	border: solid 1px #000000 !important;
+  }
+  
+  .calendar-calendar table {
+  }
+
+.calendar-calendar td .inner div.day {
+	width: 100% !important; 
+	text-align: right;
+} 
+
+.calendar-calendar td .inner div, 
+.calendar-calendar td .inner div a {
+    float: none;
+}
+
+.calendar-calendar td .inner div a:link, 
+.calendar-calendar td .inner div a:visited {
+	text-decoration: none !important;
+}
+
+.calendar-calendar .view-data-node-title { 
+	padding-bottom: 0px !important;
+}
+
+.calendar-calendar .view-data-node-title a { 
+	padding: 0px !important;
+}
+
+/* lunch menu specific */ 
+#block-block-53 { 
+	display: none;
+}

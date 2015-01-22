@@ -1,0 +1,162 @@
+/* LESS.css variables */
+/* CLASSIC 1b */
+/* LESS.css variables */
+/* (get imported in each separate .less file) 
+CLASSIC 1A*/
+/******************************** LAYOUT ********************************/
+/******************************** COLORS ********************************//* Branding Colors */
+/****************************** TYPOGRAPHY ******************************/
+strong,
+b {
+  font-family: 'Avenir LT W01 45 Book', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-weight: 700;
+}
+em,
+i {
+  font-family: 'Avenir LT W01 45 Book', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-style: italic;
+}
+strong em,
+em strong,
+b i,
+i b {
+  font-family: 'AvenirLTW01-85HeavyObli', Verdana, Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+body#tinymce em,
+body.forceColors #iframe em,
+body #tinymce em,
+body.mceContentBody em,
+body#tinymce i,
+body.forceColors #iframe i,
+body #tinymce i,
+body.mceContentBody i {
+  font-style: italic;
+}
+body#tinymce b,
+body.forceColors #iframe b,
+body #tinymce b,
+body.mceContentBody b,
+body#tinymce strong,
+body.forceColors #iframe strong,
+body #tinymce strong,
+body.mceContentBody strong {
+  font-weight: bold;
+}
+/*************************** HTML BASE STYLES ****************************/
+/* H1*/
+/* H2*/
+/* H3*/
+/* H4*/
+/* H5*/
+/* H6*/
+/* Blockquote */
+/* Links */
+/*************************** FORM BASE STYLES ****************************/
+/******************************** BUTTONS ********************************/
+/******************************** HEADER ********************************/
+/******************************** TOOLBAR ********************************/
+/******************************** NAVBAR ********************************/
+/***************************** MOBILE MENU ******************************/
+/****************************** SEARCH **********************************/
+/**************************** SIDEBAR-LEFT ******************************/
+/**************************** SIDEBAR-RIGHT *****************************/
+/****************************** FLEX SLIDER *******************************/
+/******************************** FOOTER ********************************/
+/******************************* HOMEPAGE *******************************/
+/* Events Feed */
+/* Callouts */
+/* News Feed */
+/* Desktop View */
+/********************************* AUX **********************************/
+/* ALERT variables */
+/* BLOG Feature variables */
+/* CURRICULUM variables */
+/* CALENDAR variables */
+/* FAQ variables */
+/* DIRECTORY Feature variables */
+/* GROUPS Feature variables */
+/* IMAGE variables */
+/* NEWS Feature variables */
+/* NEWSLETTER variables */
+/* NEWSLETTER mail variables */
+/****************************** FUNCTIONS *******************************/
+.no_select_highlight {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+/* DEPRECIATED */
+/* @navbar-text: #fff; */
+/* @navbar-active: @color-light-green; */
+/* @navbar-height: auto; */
+/* @submit-button-top: @color-blue; */
+/* @submit-button-bottom: @color-dark-blue; */
+/* @submit-button-hover-top: @color-dark-blue; */
+/* @submit-button-hover-bottom: @color-blue; */
+/* @callout-color: @color-red; */
+/* @callout-link: @color-red; */
+/* @callout-gradient: @color-red; */
+/* @submit-button: @color-light-green; */
+/* @submit-button-hover: @color-green; */
+/* @directory-button-show-all: @color-green; */
+/* @directory-button-show-all-hover: @color-light-green; */
+/* @directory-button-show-all-text: #fff; */
+/* @directory-button-show-all-text-hover: #fff; */
+/*****************************
+*** CURRICULUM GRID styles ***
+*****************************/
+.view-course-grid .views-view-grid {
+  border: 0 none !important;
+}
+.view-course-grid .views-view-grid tbody,
+.view-course-grid .views-view-grid tr,
+.view-course-grid .views-view-grid td,
+.view-course-grid .views-view-grid th {
+  border: 0 none !important;
+  text-align: center;
+}
+.view-course-grid .views-view-grid .row-1,
+.view-course-grid .views-view-grid .row-3,
+.view-course-grid .views-view-grid .row-5,
+.view-course-grid .views-view-grid .row-7,
+.view-course-grid .views-view-grid .row-9,
+.view-course-grid .views-view-grid .row-11 {
+  background-color: #e5e5e5;
+}
+.view-course-grid .views-view-grid .row-2,
+.view-course-grid .views-view-grid .row-4,
+.view-course-grid .views-view-grid .row-6,
+.view-course-grid .views-view-grid .row-8,
+.view-course-grid .views-view-grid .row-10,
+.view-course-grid .views-view-grid .row-12 {
+  background-color: #f6f6f6;
+}
+.view-course-grid .views-view-grid th {
+  padding: .5em;
+}
+.view-course-grid .views-view-grid td {
+  font-size: 0;
+  line-height: 0;
+}
+.view-course-grid .views-view-grid td a {
+  color: #68ad45;
+  display: block;
+  font-size: 16px;
+  line-height: 16px;
+  padding: .5em;
+  text-decoration: none;
+}
+.view-course-grid .views-view-grid td a:hover {
+  color: #00705a;
+}
+.view-course-grid .attachment-after article {
+  clear: both;
+  display: block;
+}
+.view-course-grid .attachment-after article .course-description {
+  display: none;
+}
